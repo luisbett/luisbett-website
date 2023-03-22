@@ -8,7 +8,11 @@
 		<router-link to="/about">Projects</router-link>
 		<router-link to="/about">Links</router-link>
 		<router-link to="/contact">Contact</router-link>
-		<span id="flag"><img src="/img/flags/br.svg" alt="" id="flag-img"></span>
+		<select name="language" v-model="language" @change="$emit('changeLanguage',language)">
+			<option value="en">English</option>
+			<option value="pt_br">Portuguese</option>
+			<option value="ea">Spanish</option>
+		</select>
 	</div>
 
 </template>
@@ -17,7 +21,13 @@
 
 	export default {
 		name: 'NavBar',
-		props: ["logo_src", "logo_alt"]
+		data() {
+			return {
+				language: 'en'
+			}
+		},
+		props: ["logo_src", "logo_alt"],
+		emits: ['changeLanguage']
 	}
 
 </script>

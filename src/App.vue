@@ -1,8 +1,8 @@
 <template>
 
-	<NavBar :logo_src="logo" :alt_src="alt" />
-	<router-view />
-	<Footer />
+	<NavBar :logo_src="logo" :alt_src="alt" @change-language="changeLanguage"/>
+	<router-view :language=currentLanguage />
+	<Footer :language=currentLanguage />
 
 </template>
 
@@ -20,7 +20,13 @@
 		data() {
 			return {
 				logo: "/img/logo.png",
-				alt: "Luis Bett"
+				alt: "Luis Bett",
+				currentLanguage: 'en'
+			}
+		},
+		methods: {
+			changeLanguage(newLanguage) {
+				this.currentLanguage = newLanguage
 			}
 		}
 	}
