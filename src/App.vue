@@ -45,6 +45,7 @@
 	.main-div {
 		margin: 50px;
 		min-height: 550px;
+		color: #262626;
 	}
 
 </style>

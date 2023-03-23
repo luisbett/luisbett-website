@@ -2,7 +2,12 @@ export default {
     data() {
         return {
             ea: {
-                homeWelcomeMessage: 'Hole, bienvenido a mi sitio web!',
+                navbarAbout: 'Sobre mi',
+                navbarProjects: 'Proyectos',
+                navbarLinks: 'Enlaces',
+                navbarContact: 'Contacto',
+                homeWelcomeMessage1: '¡Hola, bienvenidos',
+                homeWelcomeMessage2: ' a mi sitio web!',
                 footerMessage: '2023 Luis Fellipy Bett. Todos los Derechos Reservados.',
                 aboutMessage: 'SOBRE ESPANOL',
                 contactMessage: 'CONTATO ESPANOL',

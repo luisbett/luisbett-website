@@ -4,10 +4,10 @@
 		<router-link to="/" id="logo">
 			<img :src="logo_src" :alt="logo_alt" id="logo-img">
 		</router-link>
-		<router-link to="/about">About me</router-link>
-		<router-link to="/projects">Projects</router-link>
-		<router-link to="/links">Links</router-link>
-		<router-link to="/contact">Contact</router-link>
+		<router-link to="/about">{{ translate('navbarAbout') }}</router-link>
+		<router-link to="/projects">{{ translate('navbarProjects') }}</router-link>
+		<router-link to="/links">{{ translate('navbarLinks') }}</router-link>
+		<router-link to="/contact">{{ translate('navbarContact') }}</router-link>
 		<select name="currentLanguage" v-model="currentLanguage" id="currentLanguage" @change="$emit('changeLanguage',currentLanguage)">
 			<option value="en">🇺🇸&ensp;English</option>
 			<option value="pt_br">🇧🇷&ensp;Portuguese</option>
@@ -19,6 +19,10 @@
 
 <script>
 
+	import pt_br from "../languages/pt_br.js"
+	import en from "../languages/en.js"
+	import ea from "../languages/ea.js"
+
 	export default {
 		name: 'NavBar',
 		data() {
@@ -27,7 +31,13 @@
 			}
 		},
 		props: ["logo_src", "logo_alt"],
-		emits: ['changeLanguage']
+		emits: ['changeLanguage'],
+		mixins: [pt_br, en, ea],
+		methods: {
+			translate(msg) {
+				return this[this.currentLanguage][msg]
+			}
+		}
 	}
 
 </script>
