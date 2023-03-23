@@ -5,13 +5,13 @@
 			<img :src="logo_src" :alt="logo_alt" id="logo-img">
 		</router-link>
 		<router-link to="/about">About me</router-link>
-		<router-link to="/about">Projects</router-link>
-		<router-link to="/about">Links</router-link>
+		<router-link to="/projects">Projects</router-link>
+		<router-link to="/links">Links</router-link>
 		<router-link to="/contact">Contact</router-link>
-		<select name="language" v-model="language" @change="$emit('changeLanguage',language)">
-			<option value="en">English</option>
-			<option value="pt_br">Portuguese</option>
-			<option value="ea">Spanish</option>
+		<select name="currentLanguage" v-model="currentLanguage" id="currentLanguage" @change="$emit('changeLanguage',currentLanguage)">
+			<option value="en">🇺🇸&ensp;English</option>
+			<option value="pt_br">🇧🇷&ensp;Portuguese</option>
+			<option value="ea">🇪🇸&ensp;Spanish</option>
 		</select>
 	</div>
 
@@ -23,7 +23,7 @@
 		name: 'NavBar',
 		data() {
 			return {
-				language: 'en'
+				currentLanguage: 'en'
 			}
 		},
 		props: ["logo_src", "logo_alt"],
@@ -53,15 +53,27 @@
 		height: 80px;
 	}
 
-	#navbar #flag {
+	#navbar #currentLanguage {
 		margin: auto;
 		margin-right: 0;
+		appearance: none;
+		outline: 0;
+		box-shadow: none;
+		border: 0!important;
+		background: #333333;
+		padding: 0 7px;
+		color: #FFFFFF;
+		cursor: pointer;
+		font-size: 15px;
+		position: relative;
+		display: flex;
+		line-height: 2;
+		border-radius: 4px;
+		transition: .5s;
 	}
 
-	#flag-img {
-		width: 30px;
-		height: 30px;
-		border-radius: 10%;
+	#navbar #currentLanguage:hover {
+		color: #25AF70;
 	}
 
 	#navbar a {

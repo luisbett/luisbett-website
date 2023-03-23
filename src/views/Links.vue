@@ -1,7 +1,7 @@
 <template>
 
 	<div class="main-div">
-		<h1>{{ translate('contactMessage') }}</h1>
+		<h1>{{ translate('linksMessage') }}</h1>
 	</div>
 
 </template>
@@ -13,7 +13,7 @@
 	import ea from "../languages/ea.js"
 
 	export default {
-		name: 'Contact',
+		name: 'Links',
 		mixins: [pt_br, en, ea],
 		props: {
 			language: String
