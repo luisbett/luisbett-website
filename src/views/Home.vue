@@ -5,6 +5,9 @@
 			<h1 id="welcome">{{ translate('homeWelcomeMessage1') }} <br> {{ translate('homeWelcomeMessage2') }}</h1>
 			<img src="/img/personal.jpg" alt="personal-img" id="personal-img">
 		</div>
+		<div id="about-div">
+			<h1>About</h1>
+		</div>
 	</div>
 
 </template>
@@ -36,7 +39,9 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin: 130px;
+		margin: auto;
+		margin-top: 150px;
+		margin-bottom: 300px;
 	}
 
 	#welcome {
@@ -45,10 +50,17 @@
 	}
 
 	#personal-img {
-		width: 380px;
+		width: 350px;
 		height: 350px;
 		border-radius: 50%;
 		border: 5px solid #262626;
+	}
+
+	#about-div {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 350px;
 	}
 
 </style>

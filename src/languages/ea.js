@@ -6,7 +6,7 @@ export default {
                 navbarProjects: 'Proyectos',
                 navbarLinks: 'Enlaces',
                 navbarContact: 'Contacto',
-                homeWelcomeMessage1: '¡Hola, bienvenidos',
+                homeWelcomeMessage1: '¡Hola, bienvenido',
                 homeWelcomeMessage2: ' a mi sitio web!',
                 footerMessage: '2023 Luis Fellipy Bett. Todos los Derechos Reservados.',
                 aboutMessage: 'SOBRE ESPANOL',
