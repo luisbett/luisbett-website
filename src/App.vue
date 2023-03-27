@@ -48,4 +48,10 @@
 		color: #262626;
 	}
 
+	h1 {
+		text-align: center;
+		font-size: 50px;
+		margin-bottom: 30px;
+	}
+
 </style>

@@ -51,6 +51,7 @@
 		display: flex;
 		justify-content: flex-end;
 		align-items: center;
+		font-size: 18px;
 	}
 
 	#navbar #logo {
@@ -80,6 +81,7 @@
 		line-height: 2;
 		border-radius: 4px;
 		transition: .5s;
+		font-size: 15px;
 	}
 
 	#navbar #currentLanguage:hover {

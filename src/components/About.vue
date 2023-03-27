@@ -1,7 +1,8 @@
 <template>
 
-	<div class="main-div">
-		<h1>{{ translate('aboutMessage') }}</h1>
+	<div id="about-div">
+		<h1 id="about-title">{{ translate('homeAboutTitle') }}</h1>
+        <p>Teste</p>
 	</div>
 
 </template>
@@ -26,3 +27,19 @@
 	}
 
 </script>
+
+<style scoped>
+
+	#about-div {
+		display: block;
+		justify-content: center;
+        text-align: center;
+		margin: auto;
+		margin-bottom: 300px;
+	}
+
+	#about-title {
+		padding: 60px;
+	}
+
+</style>

@@ -1,27 +1,22 @@
 <template>
 
 	<div class="main-div">
-		<h1>{{ translate('contactMessage') }}</h1>
+		<Form :language="language"/>
 	</div>
 
 </template>
 
 <script>
 
-	import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
+	import Form from "../components/Form.vue"
 
 	export default {
 		name: 'Contact',
-		mixins: [pt_br, en, ea],
+		components: {
+			Form
+		},
 		props: {
 			language: String
-		},
-		methods: {
-			translate(msg) {
-				return this[this.language][msg]
-			}
 		}
 	}
 
