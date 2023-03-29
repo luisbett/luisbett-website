@@ -13,6 +13,7 @@ export default {
                 formTitle: 'Entre en contacto',
                 formName: 'Su nombre',
                 formEmail: 'Su e-mail',
+                formPhone: 'Su teléfono',
                 formMessage: 'Su mensaje',
                 formButton: 'Enviar',
                 linksMessage: 'Enlaces',
