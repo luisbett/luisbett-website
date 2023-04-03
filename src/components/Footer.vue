@@ -32,7 +32,6 @@
 	#footer {
 		height: 100px;
 		background-color: #191919;
-		border-top: 4px solid #000000;
 		color: #FFFFFF;
 		display: flex;
 		align-items: center;

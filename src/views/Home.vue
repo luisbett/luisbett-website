@@ -3,6 +3,7 @@
 	<div class="main-div">
 		<Welcome :language="language"/>
 		<About :language="language"/>
+		<MoreInfo :language="language"/>
 	</div>
 
 </template>
@@ -11,12 +12,14 @@
 
 	import Welcome from '../components/Welcome.vue'
 	import About from '../components/About.vue'
+	import MoreInfo from '../components/MoreInfo.vue'
 
 	export default {
 		name: 'Home',
 		components: {
 			Welcome,
-			About
+			About,
+			MoreInfo
 		},
 		props: {
 			language: String

@@ -43,9 +43,9 @@
 	}
 
 	.main-div {
-		margin: 50px;
+		margin-top: 160px;
 		min-height: 550px;
-		color: #262626;
+		color: #191919;
 	}
 
 	h1 {
