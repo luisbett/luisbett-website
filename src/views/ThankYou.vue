@@ -1,7 +1,9 @@
 <template>
 
-	<div class="main-div">
+	<div class="main-container">
+
 		<ThankYouComp :language="language"/>
+
 	</div>
 
 </template>

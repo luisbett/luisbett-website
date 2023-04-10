@@ -1,8 +1,8 @@
 <template>
 
 	<NavBar :logo_src="logo" :alt_src="alt" @change-language="changeLanguage"/>
-	<router-view :language=currentLanguage />
-	<Footer :language=currentLanguage />
+	<router-view :language=language />
+	<Footer :language=language />
 
 </template>
 
@@ -21,12 +21,12 @@
 			return {
 				logo: "/img/logo.png",
 				alt: "Luis Bett",
-				currentLanguage: 'en'
+				language: 'en'
 			}
 		},
 		methods: {
 			changeLanguage(newLanguage) {
-				this.currentLanguage = newLanguage
+				this.language = newLanguage
 			}
 		}
 	}
@@ -37,15 +37,13 @@
 
 	* {
 		font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		box-sizing: border-box;
 		padding: 0;
 		margin: 0;
-		box-sizing: border-box;
 	}
 
-	.main-div {
-		margin-top: 160px;
-		min-height: 550px;
-		color: #191919;
+	.main-container {
+		margin-top: 104px;
 	}
 
 	h1 {

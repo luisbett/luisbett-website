@@ -1,29 +1,28 @@
 <template>
 
-	<div id="welcome-container">
-		<div id="welcome-left">
-			<h1 id="welcome-msg">{{ translate('homeWelcomeMessage1') }} <br> {{ translate('homeWelcomeMessage2') }} <span id="personal-name">Luis Bett</span>!</h1>
-			<p id="profession-title">Full Stack Developer</p>
-			<div id="welcome-buttons">
-				<a href="https://www.linkedin.com/in/luis-fellipy-bett/" target="_blank">
-					<img src="/img/icons/linkedin-black-256.png">
-					<span class="button-title">LinkedIn</span>
-				</a>
-				<a href="https://github.com/luisbett" target="_blank">
-					<img src="/img/icons/github-black-256.png">
-					<span class="button-title">GitHub</span>
-				</a>
+	<div class="welcome-container">
+
+		<div class="welcome-left">
+			<h1>{{ translate('homeWelcomeMessage1') }} <br> {{ translate('homeWelcomeMessage2') }} <span>Luis Bett</span>!</h1>
+			<p>Full Stack Developer</p>
+			<div class="welcome-buttons">
+				<Button :language=language label="buttonLinkedIn" size="large" color="greenWhite" imgSrc="/img/icons/linkedin-black.png" @click="openLink(1)"/>
+				<Button :language=language label="buttonGitHub" size="large" color="greenWhite" imgSrc="/img/icons/github-black.png" @click="openLink(2)"/>
 			</div>
 		</div>
-		<div id="welcome-right">
-			<img src="/img/circle.png" alt="shape-img" id="shape-img">
-			<img src="/img/personal.png" alt="personal-img" id="personal-img">
+
+		<div class="welcome-right">
+			<img class="shape-img" src="/img/circle-outline.png" alt="shape-img">
+			<img class="personal-img" src="/img/personal.png" alt="personal-img">
 		</div>
+
 	</div>
 
 </template>
 
 <script>
+
+	import Button from './Button.vue'
 
 	import pt_br from "../languages/pt_br.js"
 	import en from "../languages/en.js"
@@ -31,13 +30,28 @@
 
 	export default {
 		name: 'Welcome',
-		mixins: [pt_br, en, ea],
-		props: {
-			language: String
+		components: {
+			Button
 		},
+		props: {
+            language: {
+                type: String,
+                default: 'en'
+            }
+		},
+		mixins: [pt_br, en, ea],
 		methods: {
 			translate(msg) {
 				return this[this.language][msg]
+			},
+			openLink(option) {
+
+				if (option === 1) {
+					window.open('https://www.linkedin.com/in/luis-fellipy-bett/', '_blank')
+				} else if (option === 2) {
+					window.open('https://github.com/luisbett', '_blank')
+				}
+
 			}
 		}
 	}
@@ -46,85 +60,56 @@
 
 <style scoped>
 
-	#welcome-container {
+	.welcome-container {
 		display: flex;
 		padding: 40px;
 		height: 500px;
 		margin-bottom: 184px;
 	}
 
-	#welcome-left {
+	.welcome-left {
 		width: 50%;
 		height: 500px;
 	}
 
-	#welcome-right {
+	.welcome-right {
 		position: relative;
 		width: 50%;
 		height: 500px;
 		z-index: -1;
 	}
 
-	#welcome-msg {
+	.welcome-left h1 {
 		font-size: 60px;
 		margin-top: 100px;
 		margin-left: 100px;
 		text-align: left;
 	}
 
-	#personal-name {
+	.welcome-left span {
 		color: #25AF70;
 	}
 
-	#profession-title {
+	.welcome-left p {
 		margin-left: 100px;
 		text-align: left;
 		font-size: 20px;
 		font-weight: bold;
 	}
 
-	#welcome-buttons {
+	.welcome-left .welcome-buttons {
+		display: flex;
 		margin-top: 30px;
 		margin-left: 100px;
-		justify-content: center;
-		padding: auto;
 	}
 
-	#welcome-buttons a {
-		margin-right: 20px;
-		padding: 15px 60px;
-		text-decoration: none;
-		background-color: #25AF70;
-		border: 2px solid #25AF70;
-		color: #FFFFFF;
-		font-weight: bold;
-		border-radius: 10px;
-		font-size: 19px;
-		transition: .5s;
-	}
-
-	#welcome-buttons a:hover {
-		background-color: #FFFFFF;
-		color: #191919;
-	}
-
-	#welcome-buttons img {
-		width: 18px;
-		height: 18px;
-		margin-top: 20px;
-	}
-
-	#welcome-buttons .button-title {
-		margin-left: 20px;
-	}
-
-	#welcome-right #shape-img {
+	.welcome-right .shape-img {
 		position: relative;
 		top: 130px;
 		left: 40px;
 	}
 
-	#welcome-right #personal-img {
+	.welcome-right .personal-img {
 		position: absolute;
 		top: 0;
 		left: 95px;

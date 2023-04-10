@@ -1,30 +1,52 @@
 <template>
 
-	<div id="navbar">
-		<div id="navbar-left">
-			<router-link to="/" id="logo">
-				<img :src="logo_src" :alt="logo_alt" id="logo-img">
-			</router-link>
+	<div class="navbar-container">
+
+		<div class="navbar-left">
+			<router-link to="/"><img :src="logo_src" :alt="logo_alt"></router-link>
 		</div>
-		<div id="navbar-center">
-			<a href="/#about">{{ translate('navbarAbout') }}</a>
+
+		<div class="navbar-center">
+			<router-link :to="{name:'home', hash:'#about'}">{{ translate('navbarAbout') }}</router-link>
 			<router-link to="/projects">{{ translate('navbarProjects') }}</router-link>
 			<router-link to="/links">{{ translate('navbarLinks') }}</router-link>
 			<router-link to="/contact">{{ translate('navbarContact') }}</router-link>
 		</div>
-		<div id="navbar-right">
-			<a id="button-cv" href="/files/CV - Luis Fellipy Bett.pdf" download>{{ translate('navbarDownloadCV') }}</a>
-			<select name="currentLanguage" v-model="currentLanguage" id="currentLanguage" @change="$emit('changeLanguage',currentLanguage)">
+
+		<div class="navbar-right">
+			<Button :language=currentLanguage label="buttonDownloadCV" size="small" color="greenBlack" @click="downloadCV"/>
+			<select name="currentLanguage" v-model="currentLanguage" @change="$emit('changeLanguage',currentLanguage)">
 				<option value="en">🇺🇸&ensp;English</option>
 				<option value="pt_br">🇧🇷&ensp;Portuguese</option>
 				<option value="ea">🇪🇸&ensp;Spanish</option>
 			</select>
 		</div>
+
+		<div class="navbar-barbutton">
+			<img src="/img/icons/bars-white.png" @click="callDropDownMenu">
+		</div>
+
+		<!-- Dropdown menu used for responsiveness -->
+		<div class="navbar-dropdown">
+			<router-link @click="callDropDownMenu" :to="{name:'home', hash:'#about'}">{{ translate('navbarAbout') }}</router-link>
+			<router-link @click="callDropDownMenu" to="/projects">{{ translate('navbarProjects') }}</router-link>
+			<router-link @click="callDropDownMenu" to="/links">{{ translate('navbarLinks') }}</router-link>
+			<router-link @click="callDropDownMenu" to="/contact">{{ translate('navbarContact') }}</router-link>
+			<Button :language=currentLanguage label="buttonDownloadCV" size="small" color="greenBlack" @click="downloadCV"/>
+			<select name="currentLanguage" v-model="currentLanguage" @change="$emit('changeLanguage',currentLanguage)">
+				<option value="en">🇺🇸&ensp;English</option>
+				<option value="pt_br">🇧🇷&ensp;Portuguese</option>
+				<option value="ea">🇪🇸&ensp;Spanish</option>
+			</select>
+		</div>
+
 	</div>
 
 </template>
 
 <script>
+
+	import Button from './Button.vue'
 
 	import pt_br from "../languages/pt_br.js"
 	import en from "../languages/en.js"
@@ -32,17 +54,49 @@
 
 	export default {
 		name: 'NavBar',
+		components: {
+			Button
+		},
 		data() {
 			return {
 				currentLanguage: 'en'
 			}
 		},
-		props: ["logo_src", "logo_alt"],
+		props: {
+            logo_src: {
+                type: String,
+                default: ''
+            },
+			logo_alt: {
+                type: String,
+                default: ''
+            }
+		},
 		emits: ['changeLanguage'],
 		mixins: [pt_br, en, ea],
 		methods: {
 			translate(msg) {
 				return this[this.currentLanguage][msg]
+			},
+			downloadCV() {
+
+				let filePath = '/files/CV - Luis Fellipy Bett.pdf' 
+				let aElement = document.createElement('a')
+
+				aElement.setAttribute('href', filePath)
+				aElement.setAttribute('download', 'CV - Luis Fellipy Bett.pdf')
+
+				aElement.style.display = 'none'
+				document.body.appendChild(aElement)
+
+				aElement.click()
+				document.body.removeChild(aElement)
+			},
+			callDropDownMenu() {
+
+				const dropDownMenu = document.querySelector('.navbar-dropdown')
+
+				dropDownMenu.classList.toggle('open')
 			}
 		}
 	}
@@ -51,53 +105,41 @@
 
 <style scoped>
 
-	#navbar {
+	.navbar-container {
 		background-color: #191919;
-		padding: 15px 50px;
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
+		padding: 10px 30px;
 		font-size: 18px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 		position: fixed;
 		top: 0;
 		width: 100%;
 		z-index: 100;
 	}
 
-	#navbar #navbar-left {
-		margin: auto;
-		margin-left: 0;
+	.navbar-container a {
+		text-decoration: none;
+		color: #FFFFFF;
+		margin: 12px;
+		transition: .5s;
 	}
 
-	#navbar #navbar-right {
-		margin: auto;
-		margin-right: 0;
-		display: flex;
-		justify-content: flex-end;
-		align-items: center;
+	.navbar-container a:hover {
+		color: #25AF70;
 	}
 
-	#logo-img {
+	.navbar-left img {
 		width: 80px;
 		height: 80px;
 	}
 
-	#navbar #button-cv {
-		padding: 8px 10px;
-		background-color: #25AF70;
-		border: 2px solid #25AF70;
-		font-weight: bold;
-		border-radius: 10px;
-		font-size: 15px;
-		transition: .5s;
+	.navbar-right {
+		display: flex;
+		align-items: center;
 	}
 
-	#navbar #button-cv:hover {
-		background-color: #191919;
-		color: #FFFFFF;
-	}
-
-	#navbar #currentLanguage {
+	.navbar-right select, .navbar-dropdown select {
 		appearance: none;
 		outline: 0;
 		box-shadow: none;
@@ -115,15 +157,57 @@
 		font-size: 15px;
 	}
 
-	#navbar a {
-		color: #FFFFFF;
-		text-decoration: none;
-		margin: 12px;
-		transition: .5s;
+	.navbar-right select:hover, .navbar-dropdown select:hover {
+		color: #25AF70;
 	}
 
-	#navbar #currentLanguage:hover, #navbar a:hover {
-		color: #25AF70;
+	.navbar-barbutton {
+		display: none;
+		cursor: pointer;
+	}
+
+	.navbar-barbutton img {
+		width: 30px;
+		height: 30px;
+	}
+
+	.navbar-dropdown {
+		display: none;
+		position: absolute;
+		top: 104px;
+		left: -100%;
+		width: 100%;
+		height: 100vh;
+		background-color: #262626;
+		transition: all .5s;
+	}
+
+	.navbar-dropdown.open {
+		left: 0;
+	}
+
+	.navbar-dropdown > * {
+		display: block;
+		text-align: center;
+		margin: 20px auto;
+		padding: 10px;
+	}
+
+	@media (max-width: 850px) {
+
+		.navbar-center,
+		.navbar-right {
+			display: none;
+		}
+
+		.navbar-barbutton {
+			display: block;
+		}
+
+		.navbar-dropdown {
+			display: block;
+		}
+
 	}
 
 </style>

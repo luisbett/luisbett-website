@@ -1,9 +1,11 @@
 <template>
 
-	<div class="main-div">
+	<div class="main-container">
+
 		<Welcome :language="language"/>
 		<About :language="language"/>
 		<MoreInfo :language="language"/>
+
 	</div>
 
 </template>

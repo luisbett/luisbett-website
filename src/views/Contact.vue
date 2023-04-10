@@ -1,7 +1,9 @@
 <template>
 
-	<div class="main-div">
+	<div class="main-container">
+
 		<Form :language="language"/>
+
 	</div>
 
 </template>

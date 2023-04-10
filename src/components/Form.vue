@@ -19,8 +19,8 @@
                 <label for="message">{{ translate('formMessage') }}</label>
                 <textarea id="message" name="message" v-model="message" rows="5" required></textarea>
             </div>
-            <div class="input-container">
-                <button id="submit-button" @click="sendEmail($event)">{{ translate('formButton') }}</button>
+            <div class="button-container">
+                <Button :language=language label="formButton" size="medium" color="blackWhite" @click="sendEmail($event)"/>
             </div>
         </form>
 	</div>
@@ -29,17 +29,24 @@
 
 <script>
 
-	import pt_br from "../languages/pt_br.js"
+	import Button from "./Button.vue"
+
+    import pt_br from "../languages/pt_br.js"
 	import en from "../languages/en.js"
 	import ea from "../languages/ea.js"
-import router from "@/router"
 
 	export default {
 		name: 'Form',
-		mixins: [pt_br, en, ea],
+        components: {
+            Button
+        },
 		props: {
-			language: String
+			language: {
+                type: String,
+                default: 'en'
+            }
 		},
+        mixins: [pt_br, en, ea],
         data() {
             return {
                 name: '',
@@ -93,8 +100,7 @@ import router from "@/router"
 	#form {
 		display: block;
 		justify-content: center;
-		margin: 0 auto;
-        text-align: center;
+		margin: auto;
         max-width: 450px;
 	}
 
@@ -105,6 +111,10 @@ import router from "@/router"
     .input-container {
         display: flex;
         flex-direction: column;
+        margin-bottom: 25px;
+    }
+
+    .button-container {
         margin-bottom: 25px;
     }
 
@@ -120,27 +130,11 @@ import router from "@/router"
     input, #message {
         padding: 10px 10px;
         border: 1px solid #737373;
+        border-radius: 10px;
     }
 
     #message {
         resize: none;
-    }
-
-    #submit-button {
-        background-color: #191919;
-        color: #FFFFFF;
-        font-weight: bold;
-        border: 2px solid #191919;
-        padding: 10px;
-        font-size: 16px;
-        cursor: pointer;
-        transition: .5s;
-        border-radius: 5px;
-    }
-
-    #submit-button:hover {
-        background-color: #FFFFFF;
-        color: #25AF70;
     }
 
 </style>

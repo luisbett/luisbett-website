@@ -1,7 +1,9 @@
 <template>
 
-	<div class="main-div">
+	<div class="main-container">
+
 		<h1>{{ translate('projectsMessage') }}</h1>
+
 	</div>
 
 </template>

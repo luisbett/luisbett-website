@@ -6,7 +6,6 @@ export default {
                 navbarProjects: "Projects",
                 navbarLinks: "Links",
                 navbarContact: "Contact",
-                navbarDownloadCV: "Download CV",
                 homeWelcomeMessage1: "Hello,",
                 homeWelcomeMessage2: "I am ",
                 homeAboutTitle: "About me",
@@ -20,7 +19,10 @@ export default {
                 linksMessage: "Let's be internet friends?",
                 projectsMessage: "Projects",
                 footerMessage: "2023 Luis Fellipy Bett. All Rights Reserved.",
-                thankYouMessage: 'Thank you for your message'
+                buttonDownloadCV: "Download CV",
+                buttonLinkedIn: "LinkedIn",
+                buttonGitHub: "GitHub",
+                thankYouMessage: "Thank you for your message"
             }
         }
     }
