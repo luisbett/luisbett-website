@@ -17,14 +17,17 @@
 	import MoreInfo from '../components/MoreInfo.vue'
 
 	export default {
-		name: 'Home',
+		name: 'HomePage',
 		components: {
 			Welcome,
 			About,
 			MoreInfo
 		},
 		props: {
-			language: String
+			language: {
+				type: String,
+				default: 'en'
+			}
 		}
 	}
 

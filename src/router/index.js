@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../views/HomePage.vue'
 
 const routes = [
 	{
@@ -10,22 +10,27 @@ const routes = [
 	{
 		path: '/projects',
 		name: 'projects',
-		component: () => import(/* webpackChunkName: "projects" */ '../views/Projects.vue')
+		component: () => import(/* webpackChunkName: "projects" */ '../views/ProjectsPage.vue')
 	},
 	{
 		path: '/links',
 		name: 'links',
-		component: () => import(/* webpackChunkName: "links" */ '../views/Links.vue')
+		component: () => import(/* webpackChunkName: "links" */ '../views/LinksPage.vue')
 	},
 	{
 		path: '/contact',
 		name: 'contact',
-		component: () => import(/* webpackChunkName: "contact" */ '../views/Contact.vue')
+		component: () => import(/* webpackChunkName: "contact" */ '../views/ContactPage.vue')
 	},
 	{
 		path: '/thankyou',
 		name: 'thankyou',
-		component: () => import(/* webpackChunkName: "contact" */ '../views/ThankYou.vue')
+		component: () => import(/* webpackChunkName: "contact" */ '../views/ThankYouPage.vue')
+	},
+	{
+		path: '/error',
+		name: 'error',
+		component: () => import(/* webpackChunkName: "contact" */ '../views/ErrorPage.vue')
 	}
 ]
 

@@ -7,7 +7,7 @@
 		</div>
 
 		<div class="navbar-center">
-			<router-link :to="{name:'home', hash:'#about'}">{{ translate('navbarAbout') }}</router-link>
+			<router-link :to="{name:'home', hash:'#about-container'}">{{ translate('navbarAbout') }}</router-link>
 			<router-link to="/projects">{{ translate('navbarProjects') }}</router-link>
 			<router-link to="/links">{{ translate('navbarLinks') }}</router-link>
 			<router-link to="/contact">{{ translate('navbarContact') }}</router-link>
@@ -28,11 +28,11 @@
 
 		<!-- Dropdown menu used for responsiveness -->
 		<div class="navbar-dropdown">
-			<router-link @click="callDropDownMenu" :to="{name:'home', hash:'#about'}">{{ translate('navbarAbout') }}</router-link>
+			<router-link @click="callDropDownMenu" :to="{name:'home', hash:'#about-container'}">{{ translate('navbarAbout') }}</router-link>
 			<router-link @click="callDropDownMenu" to="/projects">{{ translate('navbarProjects') }}</router-link>
 			<router-link @click="callDropDownMenu" to="/links">{{ translate('navbarLinks') }}</router-link>
 			<router-link @click="callDropDownMenu" to="/contact">{{ translate('navbarContact') }}</router-link>
-			<Button :language=currentLanguage label="buttonDownloadCV" size="small" color="greenBlack" @click="downloadCV"/>
+			<Button :language=currentLanguage label="buttonDownloadCV" size="small" color="greenGray" @click="downloadCV"/>
 			<select name="currentLanguage" v-model="currentLanguage" @change="$emit('changeLanguage',currentLanguage)">
 				<option value="en">🇺🇸&ensp;English</option>
 				<option value="pt_br">🇧🇷&ensp;Portuguese</option>
@@ -57,11 +57,6 @@
 		components: {
 			Button
 		},
-		data() {
-			return {
-				currentLanguage: 'en'
-			}
-		},
 		props: {
             logo_src: {
                 type: String,
@@ -72,8 +67,13 @@
                 default: ''
             }
 		},
-		emits: ['changeLanguage'],
+		data() {
+			return {
+				currentLanguage: 'en'
+			}
+		},
 		mixins: [pt_br, en, ea],
+		emits: ['changeLanguage'],
 		methods: {
 			translate(msg) {
 				return this[this.currentLanguage][msg]
@@ -139,6 +139,10 @@
 		align-items: center;
 	}
 
+	.navbar-right button {
+		margin-right: 10px;
+	}
+
 	.navbar-right select, .navbar-dropdown select {
 		appearance: none;
 		outline: 0;
@@ -193,7 +197,7 @@
 		padding: 10px;
 	}
 
-	@media (max-width: 850px) {
+	@media (max-width: 819px) {
 
 		.navbar-center,
 		.navbar-right {

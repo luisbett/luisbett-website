@@ -14,10 +14,13 @@
 
 	export default {
 		name: 'Footer',
-		mixins: [pt_br, en, ea],
 		props: {
-			language: String
+			language: {
+				type: String,
+				default: 'en'
+			}
 		},
+		mixins: [pt_br, en, ea],
 		methods: {
 			translate(msg) {
 				return this[this.language][msg]

@@ -1,29 +1,32 @@
 <template>
 
-	<div id="form">
-        <h1>{{ translate('formTitle') }}</h1>
-        <form id="contact-form">
-            <div class="input-container">
-                <label for="name">{{ translate('formName') }}</label>
-                <input type="text" id="name" name="name" v-model="name" required>
-            </div>
-            <div class="input-container">
-                <label for="email">{{ translate('formEmail') }}</label>
-                <input type="email" id="email" name="email" v-model="email" required>
-            </div>
-            <div class="input-container">
-                <label for="phone">{{ translate('formPhone') }}</label>
-                <input type="text" id="phone" name="phone" v-model="phone" required>
-            </div>
-            <div class="input-container">
-                <label for="message">{{ translate('formMessage') }}</label>
-                <textarea id="message" name="message" v-model="message" rows="5" required></textarea>
-            </div>
-            <div class="button-container">
-                <Button :language=language label="formButton" size="medium" color="blackWhite" @click="sendEmail($event)"/>
-            </div>
-        </form>
-	</div>
+    <form class="form-container">
+
+        <div class="input-container">
+            <label for="name">{{ translate('formName') }}</label>
+            <input type="text" id="name" name="name" v-model="name" required>
+        </div>
+
+        <div class="input-container">
+            <label for="email">{{ translate('formEmail') }}</label>
+            <input type="email" id="email" name="email" v-model="email" required>
+        </div>
+
+        <div class="input-container">
+            <label for="phone">{{ translate('formPhone') }}</label>
+            <input type="text" id="phone" name="phone" v-model="phone" required>
+        </div>
+
+        <div class="input-container">
+            <label for="message">{{ translate('formMessage') }}</label>
+            <textarea id="message" name="message" v-model="message" rows="5" required></textarea>
+        </div>
+
+        <div class="button-container">
+            <Button :language=language label="formButton" size="large" color="blackWhite" @click="sendEmail($event)"/>
+        </div>
+
+    </form>
 
 </template>
 
@@ -46,7 +49,6 @@
                 default: 'en'
             }
 		},
-        mixins: [pt_br, en, ea],
         data() {
             return {
                 name: '',
@@ -55,6 +57,7 @@
                 message: ''
             }
         },
+        mixins: [pt_br, en, ea],
         mounted() {
             const emailJSScript = document.createElement("script")
             
@@ -86,6 +89,7 @@
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
                     router.push({path: '/thankyou'})
+                    this.$router.push(srcPath)
                 }, function(error) {
                     console.log('FAILED...', error);
                 });*/
@@ -97,16 +101,11 @@
 
 <style scoped>
 
-	#form {
+	.form-container {
 		display: block;
-		justify-content: center;
 		margin: auto;
-        max-width: 450px;
+        max-width: 400px;
 	}
-
-    #contact-form {
-        margin-top: 50px;
-    }
 
     .input-container {
         display: flex;
@@ -115,6 +114,8 @@
     }
 
     .button-container {
+        display: flex;
+        justify-content: center;
         margin-bottom: 25px;
     }
 
@@ -127,13 +128,13 @@
         text-align: left;
     }
 
-    input, #message {
+    input, textarea {
         padding: 10px 10px;
         border: 1px solid #737373;
         border-radius: 10px;
     }
 
-    #message {
+    textarea {
         resize: none;
     }
 

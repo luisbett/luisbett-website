@@ -1,7 +1,7 @@
 <template>
 
     <button v-on="$listeners" :class="[ 'baseButton', size, color ]">
-        <img v-if=imgSrc :src=imgSrc>
+        <img v-if=imgSrc :src=imgSrc alt="Button Image">
         {{ translate( label ) }}
     </button>
 
@@ -51,7 +51,6 @@
 
     .baseButton {
         display: flex;
-        margin-right: 15px;
         border-radius: 10px;
         cursor: pointer;
         transition: .5s;
@@ -87,6 +86,18 @@
 
     .greenBlack:hover{
         background-color: #191919;
+        color: #FFFFFF;
+    }
+
+    .greenGray {
+        background-color: #25AF70;
+        border: 2px solid #25AF70;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+    .greenGray:hover{
+        background-color: #262626;
         color: #FFFFFF;
     }
 

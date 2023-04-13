@@ -1,53 +1,76 @@
 <template>
 
-	<div id="about">
+	<div id="about-container" class="about-container">
+
 		<h1>{{ translate('homeAboutTitle') }}</h1>
-		<div id="about-container">
-			<div id="about-topics">
-				<ul id="list">
-					<li><img src="/img/icons/fullname.png" alt="fullname-icon">Full name: <span class="infos">Luis Fellipy Bett</span></li>
-					<li><img src="/img/icons/location.png" alt="location-icon">Location: <span class="infos">Dublin</span></li>
-					<li>Skills:
-						<table>
-							<tr>
-								<th><img src="/img/icons/html.png" alt="html-logo"></th>
-								<th>HTML</th>
-							</tr>
-							<tr>
-								<th><img src="/img/icons/css.png" alt="css-logo"></th>
-								<th>CSS</th>
-							</tr>
-							<tr>
-								<th><img src="/img/icons/javascript.png" alt="javascript-logo"></th>
-								<th>JavaScript</th>
-							</tr>
-							<tr>
-								<th><img src="/img/icons/vue.png" alt="vue-logo"></th>
-								<th>Vue</th>
-							</tr>
-							<tr>
-								<th><img src="/img/icons/sql.png" alt="sql-logo"></th>
-								<th>SQL</th>
-							</tr>
-						</table>
-					</li>
-				</ul>
-			</div>
-			<div id="about-text">
-				<p>Nascido em Joinville, Santa Catarina, Brazil e atualmente vivendo em Dublin.</p>
-				<p>Sou uma pessoa apaixonada por tecnologia, esporte e musica.</p>
-				<p>Comecei a estudar desenvolvimento de software no ensino medio quando junto com o ensino regular pude cursar um curso tecnico em informatica.</p>
-				<p>Apos o ensino medio entrei na universidade e fiz um tecnologo em Analise e Desenvolvimento de Sistemas.</p>
-				<p>Enquanto estava na universidade consegui meu primeiro emprego na area como desenvolvedor na NG Informatica.</p>
-				<p>Apos 5 anos de trabalho decidi vir para a Dublin na Irlanda para estudar a lingua inglesa.</p>
-				<p>Desde entao sou apoixonado pelo estilo de vida europeu e busco minha primeira oportunidade fora do Brasil.</p>
-			</div>
+
+		<div class="about-text">
+			<p>{{ translate('abouMeText') }}</p>
 		</div>
+		
+		<div class="about-subcontainer">
+
+			<div class="about-left">
+				
+				<div class="about-fullname">
+
+					<img src="/img/icons/fullname.png" alt="fullname-icon">
+					<h2>Full name: <span style="font-weight: normal;">Luis Fellipy Bett</span></h2>
+
+				</div>
+
+				<div class="about-nationality">
+
+					<img src="/img/icons/passport.png" alt="nationality-icon">
+					<h2>Nationality: <span style="font-weight: normal;">Brazilian</span></h2>
+
+				</div>
+				
+				<div class="about-location">
+
+					<div class="about-location-title">
+						
+						<img src="/img/icons/location.png" alt="location-icon">
+						<h2>Location:</h2>
+
+					</div>
+
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d152516.0989691037!2d-6.410509647330417!3d53.32420655617449!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48670e80ea27ac2f%3A0xa00c7a9973171a0!2sDublin!5e0!3m2!1sen!2sie!4v1681399404611!5m2!1sen!2sie" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+				</div>
+
+			</div>
+
+			<div class="about-right">
+
+				<div class="about-carousel">
+
+					<div class="about-carousel-title">
+						
+						<img src="/img/icons/skills.png" alt="skills-icon">
+						<h2>Skills:</h2>
+
+					</div>
+
+					<div class="about-carousel-skills">
+
+						<Carousel :language=language />
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
 	</div>
 
 </template>
 
 <script>
+
+	import Carousel from './Carousel.vue'
 
 	import pt_br from "../languages/pt_br.js"
 	import en from "../languages/en.js"
@@ -55,10 +78,16 @@
 
 	export default {
 		name: 'About',
-		mixins: [pt_br, en, ea],
-		props: {
-			language: String
+		components: {
+			Carousel
 		},
+		props: {
+			language: {
+				type: String,
+				default: 'en'
+			}
+		},
+		mixins: [pt_br, en, ea],
 		methods: {
 			translate(msg) {
 				return this[this.language][msg]
@@ -70,64 +99,132 @@
 
 <style scoped>
 
-	#about {
+	.about-container {
 		display: block;
+		padding: 30px;
 		text-align: center;
 		margin: auto;
-		padding: 50px;
 		background-color: #262626;
 		color: #FFFFFF;
 	}
 
-	#about h1 {
+	.about-container h1 {
 		margin-top: 80px;
 	}
 
-	#about #about-container {
+	.about-text {
+		width: 80%;
+		height: 40vh;
+		margin: auto;
+	}
+
+	.about-text p {
+		font-size: 20px;
+		font-family: monospace;
+	}
+
+	.about-subcontainer {
 		display: flex;
-		margin-top: 100px;
-		margin-bottom: 100px;
 	}
 
-	#about #about-topics {
+	.about-left, .about-right {
+		padding: 10px 50px;
 		width: 50%;
-		font-size: 19px;
-		text-align: left;
-		font-weight: bold;
+		height: 70vh;
 	}
 
-	#about #about-topics #list {
-		margin-left: 250px;
-		list-style-type: none;
+	.about-fullname, .about-nationality, .about-location, .about-carousel {
+		padding: 15px;
+		background-color: #191919;
+		border-radius: 10px;
+		margin-bottom: 20px;
 	}
 
-	#about #about-topics li {
-		padding: 20px;
+	.about-fullname, .about-nationality, .about-location-title, .about-carousel-title {
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 
-	#about #about-topics table {
-		padding: 20px;
+	.about-location, .about-carousel {
+		display: block;
 	}
 
-	#about #about-topics table th {
-		padding: 8px;
+	.about-location-title, .about-carousel-title {
+		margin-bottom: 20px;
 	}
 
-	#about #about-topics img {
-		width: 20px;
-		height: 20px;
+	.about-fullname img, .about-nationality img, .about-location img, .about-carousel img {
+		width: 30px;
+		height: 30px;
 		margin-right: 10px;
 	}
 
-	.infos {
-		color: #25AF70;
+	.about-location iframe {
+		width: 55vh;
+		height: 35vh;
+		border: 0;
+		border-radius: 10px;
 	}
 
-	#about #about-text {
-		width: 30%;
-		font-size: 19px;
-		padding: 20px;
-		text-align: right;
+	.about-carousel-skills {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	@media (max-width: 1130px) {
+
+		.about-location iframe {
+			width: 35vh;
+			height: 40vh;
+		}
+	}
+
+	@media (max-width: 1000px) {
+
+		.about-text {
+			height: 60vh;
+		}
+	}
+
+	@media (max-width: 850px) {
+
+		.about-subcontainer {
+			display: block;
+		}
+
+		.about-left {
+			width: 100%;
+			height: 90vh;
+			padding: 10px 10px;
+		}
+
+		.about-right {
+			width: 100%;
+			height: 70vh;
+		}
+
+		.about-location iframe {
+			width: 55vh;
+			height: 35vh;
+		}
+	}
+
+	@media (max-width: 730px) {
+
+		.about-text {
+			height: 130vh;
+		}
+	}
+
+	@media (max-width: 620px) {
+
+		.about-location iframe {
+			width: 35vh;
+			height: 40vh;
+		}
+
 	}
 
 </style>

@@ -1,41 +1,24 @@
 <template>
 
-    <div id="moreinfo">
-        <h1>More information</h1>
-		<div id="moreinfo-text">
-			<p>Nasci na cidade de Joinville, Santa Catarina, Brasil e atualmente resido em Dublin. <br>
-			Sempre gostei muito de tecnologia e me fascina saber o poder que ela nos da diariamente para realizarmos <br>
-			nossas atividades diarias.</p>
-			<p>Nasci na cidade de Joinville, Santa Catarina, Brasil e atualmente resido em Dublin. <br>
-			Sempre gostei muito de tecnologia e me fascina saber o poder que ela nos da diariamente para realizarmos <br>
-			nossas atividades diarias.</p>
-			<p>Nasci na cidade de Joinville, Santa Catarina, Brasil e atualmente resido em Dublin. <br>
-			Sempre gostei muito de tecnologia e me fascina saber o poder que ela nos da diariamente para realizarmos <br>
-			nossas atividades diarias.</p>
-			<p>Nasci na cidade de Joinville, Santa Catarina, Brasil e atualmente resido em Dublin. <br>
-			Sempre gostei muito de tecnologia e me fascina saber o poder que ela nos da diariamente para realizarmos <br>
-			nossas atividades diarias.</p>
-			<p>Nasci na cidade de Joinville, Santa Catarina, Brasil e atualmente resido em Dublin. <br>
-			Sempre gostei muito de tecnologia e me fascina saber o poder que ela nos da diariamente para realizarmos <br>
-			nossas atividades diarias.</p>
-			<p>Nasci na cidade de Joinville, Santa Catarina, Brasil e atualmente resido em Dublin. <br>
-			Sempre gostei muito de tecnologia e me fascina saber o poder que ela nos da diariamente para realizarmos <br>
-			nossas atividades diarias.</p>
-			<p>Nasci na cidade de Joinville, Santa Catarina, Brasil e atualmente resido em Dublin. <br>
-			Sempre gostei muito de tecnologia e me fascina saber o poder que ela nos da diariamente para realizarmos <br>
-			nossas atividades diarias.</p>
-			<p>Nasci na cidade de Joinville, Santa Catarina, Brasil e atualmente resido em Dublin. <br>
-			Sempre gostei muito de tecnologia e me fascina saber o poder que ela nos da diariamente para realizarmos <br>
-			nossas atividades diarias.</p>
-			<router-link to="/projects">{{ translate('navbarProjects') }}</router-link>
-			<router-link to="/links">{{ translate('navbarLinks') }}</router-link>
-			<router-link to="/contact">{{ translate('navbarContact') }}</router-link>
+    <div class="moreinfo-container">
+		
+        <h1>{{ translate('homeMoreInfoTitle') }}</h1>
+
+		<div class="moreinfo-subcontainer">
+
+			<Card :language=language model="link" title="navbarProjects" titleImg="/img/icons/gear.png" description="prjCodecDsc" buttonLink="/projects"/>
+			<Card :language=language model="link" title="navbarLinks" titleImg="/img/icons/internet.png" description="prjCodecDsc" buttonLink="/links"/>
+			<Card :language=language model="link" title="navbarContact" titleImg="/img/icons/at.png" description="prjCodecDsc" buttonLink="/contact"/>
+
 		</div>
+
     </div>
 
 </template>
 
 <script>
+
+	import Card from './Card.vue'
 
     import pt_br from "../languages/pt_br.js"
 	import en from "../languages/en.js"
@@ -43,10 +26,16 @@
 
 	export default {
 		name: 'MoreInfo',
-		mixins: [pt_br, en, ea],
-		props: {
-			language: String
+		components: {
+			Card
 		},
+		props: {
+			language: {
+				type: String,
+				default: 'en'
+			}
+		},
+		mixins: [pt_br, en, ea],
 		methods: {
 			translate(msg) {
 				return this[this.language][msg]
@@ -58,19 +47,48 @@
 
 <style scoped>
 
-    #moreinfo {
+    .moreinfo-container {
 		display: block;
-		justify-content: center;
+		padding: 30px;
         text-align: center;
+		margin: auto;
 		background-color: #262626;
 		color: #FFFFFF;
-		margin: auto;
-		padding: 100px;
 	}
 
-	#moreinfo #moreinfo-text {
-		margin-top: 70px;
-		font-size: 19px;
+	.moreinfo-container h1 {
+		margin-top: 80px;
 	}
+
+	.moreinfo-subcontainer {
+		width: 80%;
+		height: 60vh;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: auto;
+	}
+
+    .moreinfo-subcontainer > * {
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 1199px) {
+
+        .moreinfo-subcontainer {
+            height: 110vh;
+            justify-content: space-evenly;
+        }
+
+    }
+
+    @media (max-width: 819px) {
+
+        .moreinfo-subcontainer {
+            height: 160vh;
+            justify-content: center;
+        }
+
+    }
 
 </style>

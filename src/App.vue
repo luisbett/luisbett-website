@@ -1,7 +1,9 @@
 <template>
 
 	<NavBar :logo_src="logo" :alt_src="alt" @change-language="changeLanguage"/>
-	<router-view :language=language />
+	<transition @before-enter="scrollTop" mode="out-in" appear>
+		<router-view :language=language />
+	</transition>
 	<Footer :language=language />
 
 </template>
@@ -27,6 +29,9 @@
 		methods: {
 			changeLanguage(newLanguage) {
 				this.language = newLanguage
+			},
+			scrollTop(){
+				document.getElementById('app').scrollIntoView();
 			}
 		}
 	}
