@@ -25,6 +25,7 @@ export default {
                 buttonDownloadCV: "Download CV",
                 buttonLinkedIn: "LinkedIn",
                 buttonGitHub: "GitHub",
+                buttonInstagram: "Instagram",
                 buttonApp: "App",
                 buttonCode: "Code",
                 buttonLink: "Go",

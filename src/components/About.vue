@@ -15,14 +15,14 @@
 				<div class="about-fullname">
 
 					<img src="/img/icons/fullname.png" alt="fullname-icon">
-					<h2>Full name: <span style="font-weight: normal;">Luis Fellipy Bett</span></h2>
+					<h2>Full name: <span class="about-infos">Luis Fellipy Bett</span></h2>
 
 				</div>
 
 				<div class="about-nationality">
 
 					<img src="/img/icons/passport.png" alt="nationality-icon">
-					<h2>Nationality: <span style="font-weight: normal;">Brazilian</span></h2>
+					<h2>Nationality: <span class="about-infos">Brazilian</span></h2>
 
 				</div>
 				
@@ -144,6 +144,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.about-infos {
+		font-weight: normal;
 	}
 
 	.about-location, .about-carousel {

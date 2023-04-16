@@ -3,7 +3,7 @@
 	<div class="welcome-container">
 
 		<div class="welcome-left" style="background-color: gray;">
-			
+
 			<!--<h1>{{ translate('homeWelcomeMessage1') }} <br> {{ translate('homeWelcomeMessage2') }} <span>Luis Bett</span>!</h1>
 			<p>Full Stack Developer</p>
 			<div class="welcome-buttons">

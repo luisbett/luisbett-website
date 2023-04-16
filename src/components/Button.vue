@@ -73,7 +73,7 @@
     }
 
     .large {
-        padding: 15px 60px;
+        padding: 15px 40px;
         font-size: 16px;
     }
     

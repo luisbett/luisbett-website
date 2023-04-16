@@ -3,8 +3,8 @@
     <div :class="[ 'card-container', model === 'project' ? 'gray' : 'darkGray' ]">
 
         <div class="title-container">
-            <h2>{{ translate( title ) }}</h2>
             <img v-if="model !== 'project'" :src="titleImg">
+            <h2>{{ translate( title ) }}</h2>
         </div>
 
         <div v-if="model==='project'" class="technology-container">
@@ -128,7 +128,7 @@
     .title-container img, .technology-container img {
         width: 10%;
         height: 10%;
-        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .paragraph-project {

@@ -105,6 +105,9 @@
 		display: block;
 		margin: auto;
         max-width: 400px;
+        padding: 20px;
+        border: 3px solid #191919;
+        border-radius: 20px;
 	}
 
     .input-container {
