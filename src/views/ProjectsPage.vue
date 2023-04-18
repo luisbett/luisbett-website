@@ -2,7 +2,7 @@
 
 	<div class="main-container">
 
-		<Projects :language=language />
+		<Projects />
 
 	</div>
 
@@ -16,12 +16,6 @@
 		name: 'ProjectsPage',
 		components: {
 			Projects
-		},
-		props: {
-			language: {
-				type: String,
-				default: 'en'
-			}
 		}
 	}
 

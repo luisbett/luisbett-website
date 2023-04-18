@@ -3,12 +3,12 @@
 	<div class="welcome-container">
 
 		<div class="welcome-left" style="background-color: gray;">
-
+			<h1>{{ $t('navbarAbout') }}</h1>
 			<!--<h1>{{ translate('homeWelcomeMessage1') }} <br> {{ translate('homeWelcomeMessage2') }} <span>Luis Bett</span>!</h1>
 			<p>Full Stack Developer</p>
 			<div class="welcome-buttons">
-				<Button :language=language label="buttonLinkedIn" size="large" color="greenWhite" imgSrc="/img/icons/linkedin-black.png" @click="openLink(1)"/>
-				<Button :language=language label="buttonGitHub" size="large" color="greenWhite" imgSrc="/img/icons/github-black.png" @click="openLink(2)"/>
+				<Button label="buttonLinkedIn" size="large" color="greenWhite" imgSrc="/img/icons/linkedin-black.png" @click="openLink(1)"/>
+				<Button label="buttonGitHub" size="large" color="greenWhite" imgSrc="/img/icons/github-black.png" @click="openLink(2)"/>
 			</div>-->
 
 		</div>
@@ -28,26 +28,12 @@
 
 	import Button from './Button.vue'
 
-	import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
-
 	export default {
 		name: 'Welcome',
 		components: {
 			Button
 		},
-		props: {
-            language: {
-                type: String,
-                default: 'en'
-            }
-		},
-		mixins: [pt_br, en, ea],
 		methods: {
-			translate(msg) {
-				return this[this.language][msg]
-			},
 			openLink(option) {
 
 				if (option === 1) {

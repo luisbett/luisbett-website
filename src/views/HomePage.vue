@@ -2,9 +2,9 @@
 
 	<div class="main-container">
 
-		<Welcome :language="language"/>
-		<About :language="language"/>
-		<MoreInfo :language="language"/>
+		<Welcome />
+		<About />
+		<MoreInfo />
 
 	</div>
 
@@ -22,12 +22,6 @@
 			Welcome,
 			About,
 			MoreInfo
-		},
-		props: {
-			language: {
-				type: String,
-				default: 'en'
-			}
 		}
 	}
 

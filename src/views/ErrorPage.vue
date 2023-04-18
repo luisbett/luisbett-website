@@ -2,7 +2,7 @@
 
 	<div class="main-container">
 
-		<Error :language="language"/>
+		<Error />
 
 	</div>
 
@@ -16,12 +16,6 @@
 		name: 'ErrorPage',
 		components: {
 			Error
-		},
-		props: {
-			language: {
-				type: String,
-				default: 'en'
-			}
 		}
 	}
 

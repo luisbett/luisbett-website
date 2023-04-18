@@ -2,10 +2,10 @@
 
 	<div id="about-container" class="about-container">
 
-		<h1>{{ translate('homeAboutTitle') }}</h1>
+		<h1>{{ $t('homeAboutTitle') }}</h1>
 
 		<div class="about-text">
-			<p>{{ translate('abouMeText') }}</p>
+			<p>{{ $t('abouMeText') }}</p>
 		</div>
 		
 		<div class="about-subcontainer">
@@ -54,7 +54,7 @@
 
 					<div class="about-carousel-skills">
 
-						<Carousel :language=language />
+						<Carousel />
 
 					</div>
 
@@ -72,26 +72,10 @@
 
 	import Carousel from './Carousel.vue'
 
-	import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
-
 	export default {
 		name: 'About',
 		components: {
 			Carousel
-		},
-		props: {
-			language: {
-				type: String,
-				default: 'en'
-			}
-		},
-		mixins: [pt_br, en, ea],
-		methods: {
-			translate(msg) {
-				return this[this.language][msg]
-			}
 		}
 	}
 

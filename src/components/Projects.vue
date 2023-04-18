@@ -2,12 +2,12 @@
 
     <div class="projects-container">
 
-        <h1>{{ translate('projectsMessage') }}</h1>
+        <h1>{{ $t('projectsMessage') }}</h1>
 
         <div class="projects-subcontainer">
             
-            <Card :language=language title="luisbett-website" tech="Vue" description="prjCodecDsc" buttonApp="https://luisbett.com/" buttonCode="https://github.com/luisbett/luisbett-website" />
-            <Card :language=language title="codec-test" tech="JS" description="prjCodecDsc" buttonCode="https://github.com/luisbett/codec-test" />            
+            <Card title="luisbett-website" tech="Vue" description="prjCodecDsc" buttonApp="https://luisbett.com/" buttonCode="https://github.com/luisbett/luisbett-website" />
+            <Card title="codec-test" tech="JS" description="prjCodecDsc" buttonCode="https://github.com/luisbett/codec-test" />            
 
         </div>
 
@@ -19,26 +19,10 @@
 
     import Card from './Card.vue'
 
-    import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
-
     export default {
         name: 'Links',
         components: {
             Card
-        },
-        props: {
-            language: {
-                type: String,
-                default: 'en'
-            }
-        },
-        mixins: [pt_br, en, ea],
-        methods: {
-			translate(msg) {
-				return this[this.language][msg]
-			}
         }
     }
 

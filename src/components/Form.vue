@@ -3,27 +3,27 @@
     <form class="form-container">
 
         <div class="input-container">
-            <label for="name">{{ translate('formName') }}</label>
+            <label for="name">{{ $t('formName') }}</label>
             <input type="text" id="name" name="name" v-model="name" required>
         </div>
 
         <div class="input-container">
-            <label for="email">{{ translate('formEmail') }}</label>
+            <label for="email">{{ $t('formEmail') }}</label>
             <input type="email" id="email" name="email" v-model="email" required>
         </div>
 
         <div class="input-container">
-            <label for="phone">{{ translate('formPhone') }}</label>
+            <label for="phone">{{ $t('formPhone') }}</label>
             <input type="text" id="phone" name="phone" v-model="phone" required>
         </div>
 
         <div class="input-container">
-            <label for="message">{{ translate('formMessage') }}</label>
+            <label for="message">{{ $t('formMessage') }}</label>
             <textarea id="message" name="message" v-model="message" rows="5" required></textarea>
         </div>
 
         <div class="button-container">
-            <Button :language=language label="formButton" size="large" color="blackWhite" @click="sendEmail($event)"/>
+            <Button label="formButton" size="large" color="blackWhite" @click="sendEmail($event)"/>
         </div>
 
     </form>
@@ -34,21 +34,11 @@
 
 	import Button from "./Button.vue"
 
-    import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
-
 	export default {
 		name: 'Form',
         components: {
             Button
         },
-		props: {
-			language: {
-                type: String,
-                default: 'en'
-            }
-		},
         data() {
             return {
                 name: '',
@@ -57,7 +47,6 @@
                 message: ''
             }
         },
-        mixins: [pt_br, en, ea],
         mounted() {
             const emailJSScript = document.createElement("script")
             
@@ -66,9 +55,6 @@
             document.head.appendChild(emailJSScript)
         },
 		methods: {
-			translate(msg) {
-				return this[this.language][msg]
-			},
             sendEmail(e) {
 
                 e.preventDefault()

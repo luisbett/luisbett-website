@@ -2,13 +2,13 @@
 
     <div class="moreinfo-container">
 		
-        <h1>{{ translate('homeMoreInfoTitle') }}</h1>
+        <h1>{{ $t('homeMoreInfoTitle') }}</h1>
 
 		<div class="moreinfo-subcontainer">
 
-			<Card :language=language model="link" title="navbarProjects" titleImg="/img/icons/gear.png" description="prjCodecDsc" buttonLink="/projects"/>
-			<Card :language=language model="link" title="navbarLinks" titleImg="/img/icons/internet.png" description="prjCodecDsc" buttonLink="/links"/>
-			<Card :language=language model="link" title="navbarContact" titleImg="/img/icons/at.png" description="prjCodecDsc" buttonLink="/contact"/>
+			<Card model="link" title="navbarProjects" titleImg="/img/icons/gear.png" description="prjCodecDsc" buttonLink="/projects"/>
+			<Card model="link" title="navbarLinks" titleImg="/img/icons/internet.png" description="prjCodecDsc" buttonLink="/links"/>
+			<Card model="link" title="navbarContact" titleImg="/img/icons/at.png" description="prjCodecDsc" buttonLink="/contact"/>
 
 		</div>
 
@@ -20,26 +20,10 @@
 
 	import Card from './Card.vue'
 
-    import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
-
 	export default {
 		name: 'MoreInfo',
 		components: {
 			Card
-		},
-		props: {
-			language: {
-				type: String,
-				default: 'en'
-			}
-		},
-		mixins: [pt_br, en, ea],
-		methods: {
-			translate(msg) {
-				return this[this.language][msg]
-			}
 		}
 	}
 

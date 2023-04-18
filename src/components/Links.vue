@@ -2,7 +2,7 @@
 
     <div class="links-container">
 
-        <h1>{{ translate('linksMessage') }}</h1>
+        <h1>{{ $t('linksMessage') }}</h1>
 
         <div class="links-subcontainer">
             
@@ -12,17 +12,17 @@
 
                 <tr>
                     <td><img class="links-logo" src="/img/icons/linkedin-green.png"></td>
-                    <td class="links-button"><Button class="links-button" :language=language label="buttonLinkedIn" size="large" color="greenGray" @click="openLink('https://www.linkedin.com/in/luis-fellipy-bett/')" /></td>
+                    <td class="links-button"><Button class="links-button" label="buttonLinkedIn" size="large" color="greenGray" @click="openLink('https://www.linkedin.com/in/luis-fellipy-bett/')" /></td>
                 </tr>
 
                 <tr>
                     <td><img class="links-logo" src="/img/icons/github-green.png"></td>
-                    <td class="links-button"><Button class="links-button" :language=language label="buttonGitHub" size="large" color="greenGray" @click="openLink('https://github.com/luisbett')" /></td>
+                    <td class="links-button"><Button class="links-button" label="buttonGitHub" size="large" color="greenGray" @click="openLink('https://github.com/luisbett')" /></td>
                 </tr>
 
                 <tr>
                     <td><img class="links-logo" src="/img/icons/intagram-green.png"></td>
-                    <td class="links-button"><Button :language=language label="buttonInstagram" size="large" color="greenGray" @click="openLink('https://www.instagram.com/luis.fellipy/')" /></td>
+                    <td class="links-button"><Button label="buttonInstagram" size="large" color="greenGray" @click="openLink('https://www.instagram.com/luis.fellipy/')" /></td>
                 </tr>
 
             </table>
@@ -37,26 +37,12 @@
 
     import Button from './Button.vue'
 
-    import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
-
     export default {
         name: 'Links',
         components: {
             Button
         },
-        props: {
-            language: {
-                type: String,
-                default: 'en'
-            }
-        },
-        mixins: [pt_br, en, ea],
         methods: {
-			translate(msg) {
-				return this[this.language][msg]
-			},
             openLink(link) {
                 window.open(link, '_blank')
             }

@@ -2,7 +2,7 @@
 
     <div class="thankyou-container">
 
-		<h1>{{ translate('thankYouMessage') }}</h1>
+		<h1>{{ $t('thankYouMessage') }}</h1>
 
     </div>
 
@@ -10,24 +10,8 @@
 
 <script>
 
-    import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
-
     export default {
-        name: 'ThankYou',
-        props: {
-            language: {
-                type: String,
-                default: 'en'
-            }
-        },
-        mixins: [pt_br, en, ea],
-        methods: {
-			translate(msg) {
-				return this[this.language][msg]
-			}
-        }
+        name: 'ThankYou'
     }
 
 </script>

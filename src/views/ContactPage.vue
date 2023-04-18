@@ -2,7 +2,7 @@
 
 	<div class="main-container">
 
-		<Contact :language=language />
+		<Contact />
 
 	</div>
 
@@ -16,12 +16,6 @@
 		name: 'ContactPage',
 		components: {
 			Contact
-		},
-		props: {
-			language: {
-				type: String,
-				default: 'en'
-			}
 		}
 	}
 

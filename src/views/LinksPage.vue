@@ -2,7 +2,7 @@
 
 	<div class="main-container">
 
-		<Links :language=language />
+		<Links />
 
 	</div>
 
@@ -16,12 +16,6 @@
         name: 'LinksPage',
         components: {
             Links
-        },
-        props: {
-            language: {
-                type: String,
-                default: 'en'
-            }
         }
     }
 

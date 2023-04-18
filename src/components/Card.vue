@@ -4,7 +4,7 @@
 
         <div class="title-container">
             <img v-if="model !== 'project'" :src="titleImg">
-            <h2>{{ translate( title ) }}</h2>
+            <h2>{{ $t( title ) }}</h2>
         </div>
 
         <div v-if="model==='project'" class="technology-container">
@@ -13,13 +13,13 @@
             <img v-if="tech === 'Vue'" src="/img/icons/vue.png">
         </div>
 
-        <p v-if="model === 'project'" class="paragraph-project">{{ translate( description ) }}</p>
-        <p v-if="model === 'link'" class="paragraph-link">{{ translate( description ) }}</p>
+        <p v-if="model === 'project'" class="paragraph-project">{{ $t( description ) }}</p>
+        <p v-if="model === 'link'" class="paragraph-link">{{ $t( description ) }}</p>
 
         <div class="buttons-container">
-            <Button v-if="buttonApp" :language=language label="buttonApp" size="medium" color="greenGray" @click="buttonAction('link', buttonApp)"/>
-            <Button v-if="buttonCode" :language=language label="buttonCode" size="medium" color="greenGray" @click="buttonAction('link', buttonCode)"/>
-            <Button v-if="buttonLink" :language=language label="buttonLink" size="large" color="greenBlack" @click="buttonAction('router', buttonLink)" />
+            <Button v-if="buttonApp" label="buttonApp" size="medium" color="greenGray" @click="buttonAction('link', buttonApp)"/>
+            <Button v-if="buttonCode" label="buttonCode" size="medium" color="greenGray" @click="buttonAction('link', buttonCode)"/>
+            <Button v-if="buttonLink" label="buttonLink" size="large" color="greenBlack" @click="buttonAction('router', buttonLink)" />
         </div>
 
     </div>
@@ -30,20 +30,12 @@
 
     import Button from './Button.vue'
 
-    import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
-
     export default {
         name: 'Card',
         components: {
             Button
         },
         props: {
-            language: {
-                type: String,
-                default: 'en'
-            },
             model: {
                 type: String,
                 default: 'project'
@@ -77,17 +69,7 @@
                 default: ''
             }
         },
-        mixins: [pt_br, en, ea],
         methods: {
-            translate(msg) {
-                
-                if (this[this.language][msg]) {
-                    return this[this.language][msg]
-                } else {
-                    return msg
-                }
-				
-			},
             buttonAction(type, srcPath) {
                 
                 if (type === 'link') {
@@ -125,10 +107,16 @@
         align-items: center;
     }
 
-    .title-container img, .technology-container img {
+    .title-container img {
         width: 10%;
         height: 10%;
         margin-right: 10px;
+    }
+
+    .technology-container img {
+        width: 10%;
+        height: 10%;
+        margin-left: 10px;
     }
 
     .paragraph-project {

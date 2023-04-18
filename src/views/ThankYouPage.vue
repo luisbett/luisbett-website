@@ -2,7 +2,7 @@
 
 	<div class="main-container">
 
-		<ThankYou :language="language"/>
+		<ThankYou />
 
 	</div>
 
@@ -16,12 +16,6 @@
 		name: 'ThankYouPage',
 		components: {
 			ThankYou
-		},
-		props: {
-			language: {
-				type: String,
-				default: 'en'
-			}
 		}
 	}
 

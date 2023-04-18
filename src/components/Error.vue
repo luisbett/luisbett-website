@@ -2,7 +2,7 @@
 
     <div class="error-container">
 
-		<h1>{{ translate('errorMessage') }}</h1>
+		<h1>{{ $t('errorMessage') }}</h1>
 
     </div>
 
@@ -10,24 +10,8 @@
 
 <script>
 
-    import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
-
     export default {
-        name: 'Error',
-        props: {
-            language: {
-                type: String,
-                default: 'en'
-            }
-        },
-        mixins: [pt_br, en, ea],
-        methods: {
-			translate(msg) {
-				return this[this.language][msg]
-			}
-        }
+        name: 'Error'
     }
 
 </script>

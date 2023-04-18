@@ -75,13 +75,7 @@
 <script>
 
     export default {
-        name: 'Carousel',
-        props: {
-            language: {
-                type: String,
-                default: 'en'
-            }
-        }
+        name: 'Carousel'
     }
 
 </script>

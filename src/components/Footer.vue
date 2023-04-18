@@ -1,31 +1,15 @@
 <template>
 
 	<div id="footer">
-		<p>{{ translate('footerMessage') }}</p>
+		<p>{{ $t('footerMessage') }}</p>
 	</div>
 
 </template>
 
 <script>
 
-	import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
-
 	export default {
-		name: 'Footer',
-		props: {
-			language: {
-				type: String,
-				default: 'en'
-			}
-		},
-		mixins: [pt_br, en, ea],
-		methods: {
-			translate(msg) {
-				return this[this.language][msg]
-			}
-		}
+		name: 'Footer'
 	}
 
 </script>

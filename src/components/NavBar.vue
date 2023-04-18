@@ -7,18 +7,18 @@
 		</div>
 
 		<div class="navbar-center">
-			<router-link :to="{name:'home', hash:'#about-container'}">{{ translate('navbarAbout') }}</router-link>
-			<router-link to="/projects">{{ translate('navbarProjects') }}</router-link>
-			<router-link to="/links">{{ translate('navbarLinks') }}</router-link>
-			<router-link to="/contact">{{ translate('navbarContact') }}</router-link>
+			<router-link :to="{name:'home', hash:'#about-container'}">{{ $t('navbarAbout') }}</router-link>
+			<router-link to="/projects">{{ $t('navbarProjects') }}</router-link>
+			<router-link to="/links">{{ $t('navbarLinks') }}</router-link>
+			<router-link to="/contact">{{ $t('navbarContact') }}</router-link>
 		</div>
 
 		<div class="navbar-right">
-			<Button :language=currentLanguage label="buttonDownloadCV" size="small" color="greenBlack" @click="downloadCV"/>
-			<select name="currentLanguage" v-model="currentLanguage" @change="$emit('changeLanguage',currentLanguage)">
-				<option value="en">🇺🇸&ensp;English</option>
-				<option value="pt_br">🇧🇷&ensp;Portuguese</option>
-				<option value="ea">🇪🇸&ensp;Spanish</option>
+			<Button label="buttonDownloadCV" size="small" color="greenBlack" @click="downloadCV"/>
+			<select v-model="$i18n.locale">
+				<option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang.key">
+					{{ lang.flag + ' ' + lang.title }}
+				</option>
 			</select>
 		</div>
 
@@ -28,15 +28,15 @@
 
 		<!-- Dropdown menu used for responsiveness -->
 		<div class="navbar-dropdown">
-			<router-link @click="callDropDownMenu" :to="{name:'home', hash:'#about-container'}">{{ translate('navbarAbout') }}</router-link>
-			<router-link @click="callDropDownMenu" to="/projects">{{ translate('navbarProjects') }}</router-link>
-			<router-link @click="callDropDownMenu" to="/links">{{ translate('navbarLinks') }}</router-link>
-			<router-link @click="callDropDownMenu" to="/contact">{{ translate('navbarContact') }}</router-link>
-			<Button :language=currentLanguage label="buttonDownloadCV" size="small" color="greenGray" @click="downloadCV"/>
-			<select name="currentLanguage" v-model="currentLanguage" @change="$emit('changeLanguage',currentLanguage)">
-				<option value="en">🇺🇸&ensp;English</option>
-				<option value="pt_br">🇧🇷&ensp;Portuguese</option>
-				<option value="ea">🇪🇸&ensp;Spanish</option>
+			<router-link @click="callDropDownMenu" :to="{name:'home', hash:'#about-container'}">{{ $t('navbarAbout') }}</router-link>
+			<router-link @click="callDropDownMenu" to="/projects">{{ $t('navbarProjects') }}</router-link>
+			<router-link @click="callDropDownMenu" to="/links">{{ $t('navbarLinks') }}</router-link>
+			<router-link @click="callDropDownMenu" to="/contact">{{ $t('navbarContact') }}</router-link>
+			<Button label="buttonDownloadCV" size="small" color="greenGray" @click="downloadCV"/>
+			<select v-model="$i18n.locale">
+				<option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang.key">
+					{{ lang.flag + ' ' + lang.title }}
+				</option>
 			</select>
 		</div>
 
@@ -47,10 +47,6 @@
 <script>
 
 	import Button from './Button.vue'
-
-	import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
 
 	export default {
 		name: 'NavBar',
@@ -69,15 +65,14 @@
 		},
 		data() {
 			return {
-				currentLanguage: 'en'
+				langs: [
+					{ key: 'en', title: 'English', flag: '🇺🇸' },
+					{ key: 'pt_br', title: 'Portuguese', flag: '🇧🇷' },
+					{ key: 'ea', title: 'Spanish', flag: '🇪🇸' }
+				]
 			}
 		},
-		mixins: [pt_br, en, ea],
-		emits: ['changeLanguage'],
 		methods: {
-			translate(msg) {
-				return this[this.currentLanguage][msg]
-			},
 			downloadCV() {
 
 				let filePath = '/files/CV - Luis Fellipy Bett.pdf' 

@@ -1,10 +1,10 @@
 <template>
 
-	<NavBar :logo_src="logo" :alt_src="alt" @change-language="changeLanguage"/>
+	<NavBar :logo_src="logo" :alt_src="alt" />
 	<transition @before-enter="scrollTop" mode="out-in" appear>
-		<router-view :language=language />
+		<router-view />
 	</transition>
-	<Footer :language=language />
+	<Footer />
 
 </template>
 
@@ -22,14 +22,10 @@
 		data() {
 			return {
 				logo: "/img/logo.png",
-				alt: "Luis Bett",
-				language: 'en'
+				alt: "Luis Bett"
 			}
 		},
 		methods: {
-			changeLanguage(newLanguage) {
-				this.language = newLanguage
-			},
 			scrollTop(){
 				document.getElementById('app').scrollIntoView();
 			}

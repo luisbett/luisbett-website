@@ -2,24 +2,16 @@
 
     <button v-on="$listeners" :class="[ 'baseButton', size, color ]">
         <img v-if=imgSrc :src=imgSrc alt="Button Image">
-        {{ translate( label ) }}
+        {{ $t( label ) }}
     </button>
 
 </template>
 
 <script>
 
-    import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
-
     export default {
         name: 'Button',
         props: {
-            language: {
-                type: String,
-                default: 'en'
-            },
             imgSrc: {
                 type: String,
                 default: ''
@@ -36,12 +28,6 @@
                 type: String,
                 default: "primary"
             }
-        },
-        mixins: [pt_br, en, ea],
-        methods: {
-            translate(msg) {
-				return this[this.language][msg]
-			}
         }
     }
 

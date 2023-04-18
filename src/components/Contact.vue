@@ -2,7 +2,7 @@
 
     <div class="contact-container">
 
-        <h1>{{ translate('formTitle') }}</h1>
+        <h1>{{ $t('formTitle') }}</h1>
 
         <div class="contact-subcontainer">
             
@@ -52,7 +52,7 @@
             <div class="contact-right">
 
                 <h2>Or leave your message here:</h2>
-                <Form :language=language />
+                <Form />
 
             </div>
 
@@ -66,26 +66,10 @@
 
 	import Form from "../components/Form.vue"
 
-    import pt_br from "../languages/pt_br.js"
-	import en from "../languages/en.js"
-	import ea from "../languages/ea.js"
-
 	export default {
 		name: 'Contact',
 		components: {
 			Form
-		},
-		props: {
-			language: {
-				type: String,
-				default: 'en'
-			}
-		},
-        mixins: [pt_br, en, ea],
-        methods: {
-			translate(msg) {
-				return this[this.language][msg]
-			}
 		}
 	}
 
