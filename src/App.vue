@@ -1,9 +1,7 @@
 <template>
 
 	<NavBar :logo_src="logo" :alt_src="alt" />
-	<transition @before-enter="scrollTop" mode="out-in" appear>
-		<router-view />
-	</transition>
+	<router-view />
 	<ScrollTopButton />
 	<Footer />
 
@@ -26,11 +24,6 @@
 			return {
 				logo: "/img/logo.png",
 				alt: "Luis Bett"
-			}
-		},
-		methods: {
-			scrollTop(){
-				document.getElementById('app').scrollIntoView();
 			}
 		}
 	}
