@@ -42,9 +42,10 @@ const router = createRouter({
             return savedPosition;
         }
         if (to.hash) {
-            return { el: to.hash };
+            return { el: to.hash,
+			behavior: 'smooth' };
         }
-        return { x: 0, y: 0 };
+		return { left: 0, top: 0 };
     }
 })
 

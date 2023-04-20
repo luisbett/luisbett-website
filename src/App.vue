@@ -4,6 +4,7 @@
 	<transition @before-enter="scrollTop" mode="out-in" appear>
 		<router-view />
 	</transition>
+	<ScrollTopButton />
 	<Footer />
 
 </template>
@@ -11,13 +12,15 @@
 <script>
 
 	import NavBar from './components/NavBar.vue'
+	import ScrollTopButton from './components/ScrollTopButton.vue';
 	import Footer from './components/Footer.vue'
 
 	export default {
 		name: 'App',
 		components: {
 			NavBar,
-			Footer
+			Footer,
+			ScrollTopButton
 		},
 		data() {
 			return {
@@ -41,6 +44,7 @@
 		box-sizing: border-box;
 		padding: 0;
 		margin: 0;
+		scroll-behavior: smooth;
 	}
 
 	.main-container {
