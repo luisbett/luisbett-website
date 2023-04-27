@@ -3,7 +3,7 @@
 	<div class="navbar-container">
 
 		<div class="navbar-left">
-			<router-link to="/"><img :src="logo_src" :alt="logo_alt"></router-link>
+			<router-link to="/"><img src="/img/logo.png" alt="Logo"></router-link>
 		</div>
 
 		<div class="navbar-center">
@@ -52,16 +52,6 @@
 		name: 'NavBar',
 		components: {
 			Button
-		},
-		props: {
-            logo_src: {
-                type: String,
-                default: ''
-            },
-			logo_alt: {
-                type: String,
-                default: ''
-            }
 		},
 		data() {
 			return {

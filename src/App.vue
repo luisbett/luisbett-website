@@ -1,6 +1,6 @@
 <template>
 
-	<NavBar :logo_src="logo" :alt_src="alt" />
+	<NavBar />
 	<router-view />
 	<ScrollTopButton />
 	<Footer />
@@ -19,12 +19,6 @@
 			NavBar,
 			ScrollTopButton,
 			Footer
-		},
-		data() {
-			return {
-				logo: "/img/logo.png",
-				alt: "Luis Bett"
-			}
 		}
 	}
 
