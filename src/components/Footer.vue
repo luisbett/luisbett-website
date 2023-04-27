@@ -23,6 +23,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: center;
+		text-align: center;
 		bottom: 0;
 		width: 100%;
 	}
