@@ -70,21 +70,11 @@
         font-weight: bold;
     }
 
-    .greenBlack:hover{
-        background-color: #191919;
-        color: #FFFFFF;
-    }
-
     .greenGray {
         background-color: #25AF70;
         border: 2px solid #25AF70;
         color: #FFFFFF;
         font-weight: bold;
-    }
-
-    .greenGray:hover{
-        background-color: #262626;
-        color: #FFFFFF;
     }
 
     .greenWhite {
@@ -94,11 +84,6 @@
         font-weight: bold;
     }
 
-    .greenWhite:hover{
-        background-color: #FFFFFF;
-        color: #191919;
-    }
-
     .blackWhite {
         background-color: #191919;
         border: 2px solid #191919;
@@ -106,9 +91,28 @@
         font-weight: bold;
     }
 
-    .blackWhite:hover {
-        background-color: #FFFFFF;
-        color: #25AF70;
+    @media (hover: hover) {
+
+        .greenBlack:hover{
+            background-color: #191919;
+            color: #FFFFFF;
+        }
+
+        .greenGray:hover{
+            background-color: #262626;
+            color: #FFFFFF;
+        }
+
+        .greenWhite:hover{
+            background-color: #FFFFFF;
+            color: #191919;
+        }
+
+        .blackWhite:hover {
+            background-color: #FFFFFF;
+            color: #25AF70;
+        }
+
     }
 
 </style>
