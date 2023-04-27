@@ -5,7 +5,7 @@
         <img src="/img/icons/check-green.png" alt="Green check symbol">
 		<h1>{{ $t('thankYouMessage') }}</h1>
         <h2>I'll return you soon!</h2>
-        <Button label="Home" size="large" color="greenWhite" imgSrc="/img/icons/house-black.png" @click="this.$router.push('/')" />
+        <Button label="Home" size="large" color="greenWhite" imgSrc="/img/icons/house-black.png" @click="$linkExecution(false, '/')" />
 
     </div>
 

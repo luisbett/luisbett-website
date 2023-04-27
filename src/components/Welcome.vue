@@ -7,8 +7,8 @@
 			<h1>{{ $t('homeWelcomeMessage1') }} <br> {{ $t('homeWelcomeMessage2') }} <span>Luis Bett</span>!</h1>
 			<p>Full Stack Developer</p>
 			<div class="welcome-buttons">
-				<Button label="buttonLinkedIn" size="large" color="greenWhite" imgSrc="/img/icons/linkedin-black.png" @click="openLink(1)"/>
-				<Button label="buttonGitHub" size="large" color="greenWhite" imgSrc="/img/icons/github-black.png" @click="openLink(2)"/>
+				<Button label="buttonLinkedIn" size="large" color="greenWhite" imgSrc="/img/icons/linkedin-black.png" @click="$linkExecution(true, 'https://www.linkedin.com/in/luis-fellipy-bett/')"/>
+				<Button label="buttonGitHub" size="large" color="greenWhite" imgSrc="/img/icons/github-black.png" @click="$linkExecution(true, 'https://github.com/luisbett')"/>
 			</div>
 
 		</div>
@@ -33,17 +33,6 @@
 		name: 'Welcome',
 		components: {
 			Button
-		},
-		methods: {
-			openLink(option) {
-
-				if (option === 1) {
-					window.open('https://www.linkedin.com/in/luis-fellipy-bett/', '_blank')
-				} else if (option === 2) {
-					window.open('https://github.com/luisbett', '_blank')
-				}
-
-			}
 		}
 	}
 

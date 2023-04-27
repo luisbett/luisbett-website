@@ -12,17 +12,17 @@
 
                 <tr>
                     <td><img class="links-logo" src="/img/icons/linkedin-green.png"></td>
-                    <td class="links-button"><Button class="links-button" label="buttonLinkedIn" size="large" color="greenGray" @click="openLink('https://www.linkedin.com/in/luis-fellipy-bett/')" /></td>
+                    <td class="links-button"><Button class="links-button" label="buttonLinkedIn" size="large" color="greenGray" @click="$linkExecution(true, 'https://www.linkedin.com/in/luis-fellipy-bett/')" /></td>
                 </tr>
 
                 <tr>
                     <td><img class="links-logo" src="/img/icons/github-green.png"></td>
-                    <td class="links-button"><Button class="links-button" label="buttonGitHub" size="large" color="greenGray" @click="openLink('https://github.com/luisbett')" /></td>
+                    <td class="links-button"><Button class="links-button" label="buttonGitHub" size="large" color="greenGray" @click="$linkExecution(true, 'https://github.com/luisbett')" /></td>
                 </tr>
 
                 <tr>
                     <td><img class="links-logo" src="/img/icons/instagram-green.png"></td>
-                    <td class="links-button"><Button label="buttonInstagram" size="large" color="greenGray" @click="openLink('https://www.instagram.com/luis.fellipy/')" /></td>
+                    <td class="links-button"><Button label="buttonInstagram" size="large" color="greenGray" @click="$linkExecution(true, 'https://www.instagram.com/luis.fellipy/')" /></td>
                 </tr>
 
             </table>
@@ -41,11 +41,6 @@
         name: 'Links',
         components: {
             Button
-        },
-        methods: {
-            openLink(link) {
-                window.open(link, '_blank')
-            }
         }
     }
 

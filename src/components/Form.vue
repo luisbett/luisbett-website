@@ -111,10 +111,10 @@
                     /*emailjs.send(serviceID, templateID, templateParams, publicKey)
                     .then(function(response) {
                         console.log('SUCCESS!', response.status, response.text);
-                        router.push({path: '/thankyou'})
-                        this.$router.push(srcPath)
+                        this.$linkExecution(false, '/thankyou')
                     }, function(error) {
                         console.log('FAILED...', error);
+                        this.$linkExecution(false, '/error')
                     });*/
 
                 }

@@ -5,7 +5,7 @@
         <img src="/img/icons/x-red.png" alt="Red x symbol">
 		<h1>{{ $t('errorMessage') }}</h1>
         <h2>Please, try again later!</h2>
-        <Button label="Home" size="large" color="greenWhite" imgSrc="/img/icons/house-black.png" @click="this.$router.push('/')" />
+        <Button label="Home" size="large" color="greenWhite" imgSrc="/img/icons/house-black.png" @click="$linkExecution(false, '/')" />
 
     </div>
 

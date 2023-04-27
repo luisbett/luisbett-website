@@ -17,9 +17,9 @@
         <p v-if="model === 'link'" class="paragraph-link">{{ $t( description ) }}</p>
 
         <div class="buttons-container">
-            <Button v-if="buttonApp" label="buttonApp" size="medium" color="greenGray" @click="buttonAction('link', buttonApp)"/>
-            <Button v-if="buttonCode" label="buttonCode" size="medium" color="greenGray" @click="buttonAction('link', buttonCode)"/>
-            <Button v-if="buttonLink" label="buttonLink" size="large" color="greenBlack" @click="buttonAction('router', buttonLink)" />
+            <Button v-if="buttonApp" label="buttonApp" size="medium" color="greenGray" @click="$linkExecution(true, buttonApp)"/>
+            <Button v-if="buttonCode" label="buttonCode" size="medium" color="greenGray" @click="$linkExecution(true, buttonCode)"/>
+            <Button v-if="buttonLink" label="buttonLink" size="large" color="greenBlack" @click="$linkExecution(false, buttonLink)" />
         </div>
 
     </div>
@@ -67,16 +67,6 @@
             buttonLink: {
                 type: String,
                 default: ''
-            }
-        },
-        methods: {
-            buttonAction(type, srcPath) {
-                
-                if (type === 'link') {
-                    window.open(srcPath, '_blank')
-                } else {
-                    this.$router.push(srcPath)
-                }
             }
         }
     }
