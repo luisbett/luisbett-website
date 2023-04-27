@@ -81,21 +81,22 @@
 		display: block;
 		padding: 30px;
 		text-align: center;
-		margin: auto;
 	}
 
 	.contact-subcontainer {
 		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
 	}
 
 	.contact-left {
-		width: 50%;
 		height: 90vh;
+		min-width: 400px;
 	}
 
 	.contact-right {
-		width: 50%;
 		height: 90vh;
+		min-width: 400px;
 	}
 
 	.contact-item {
@@ -145,25 +146,11 @@
 		margin-bottom: 30px;
 	}
 
-    @media (max-width: 850px) {
+	@media (max-width: 859px) {
 
-        .contact-subcontainer {
-            display: block;
+        .contact-item {
+            width: 40vh;
         }
-
-        .contact-left {
-            width: 100%;
-            height: 95vh;
-        }
-
-        .contact-right {
-            width: 100%;
-            height: 95vh;
-        }
-
-		.contact-item {
-			width: 40vh;
-		}
 
 		.contact-item-img {
 			width: 50%;

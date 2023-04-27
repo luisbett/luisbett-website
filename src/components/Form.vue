@@ -127,4 +127,12 @@
         resize: none;
     }
 
+    @media (max-width: 859px) {
+
+        .form-container {
+            max-width: 350px;
+        }
+
+    }
+
 </style>

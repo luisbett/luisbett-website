@@ -17,8 +17,8 @@
 		name: 'App',
 		components: {
 			NavBar,
-			Footer,
-			ScrollTopButton
+			ScrollTopButton,
+			Footer
 		},
 		data() {
 			return {

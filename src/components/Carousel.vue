@@ -13,8 +13,8 @@
             <h2>HTML</h2>
             <img class="tech-logo" src="/img/icons/html.png" alt="html-logo">
 
-            <label for="element5" class="pre"><img class="left-arrow" src="/img/icons/arrow-left.png"></label>
-            <label for="element2" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right.png"></label>
+            <label for="element5" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
+            <label for="element2" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
 
         </div>
 
@@ -23,8 +23,8 @@
             <h2>CSS</h2>
             <img class="tech-logo" src="/img/icons/css.png" alt="css-logo">
 
-            <label for="element1" class="pre"><img class="left-arrow" src="/img/icons/arrow-left.png"></label>
-            <label for="element3" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right.png"></label>
+            <label for="element1" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
+            <label for="element3" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
 
         </div>
 
@@ -33,8 +33,8 @@
             <h2>JavaScript</h2>
             <img class="tech-logo" src="/img/icons/javascript.png" alt="javascript-logo">
 
-            <label for="element2" class="pre"><img class="left-arrow" src="/img/icons/arrow-left.png"></label>
-            <label for="element4" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right.png"></label>
+            <label for="element2" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
+            <label for="element4" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
 
         </div>
 
@@ -43,8 +43,8 @@
             <h2>Vue</h2>
             <img class="tech-logo" src="/img/icons/vue.png" alt="vue-logo">
 
-            <label for="element3" class="pre"><img class="left-arrow" src="/img/icons/arrow-left.png"></label>
-            <label for="element5" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right.png"></label>
+            <label for="element3" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
+            <label for="element5" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
 
         </div>
 
@@ -53,8 +53,8 @@
             <h2>SQL</h2>
             <img class="tech-logo" src="/img/icons/sql.png" alt="sql-logo">
 
-            <label for="element4" class="pre"><img class="left-arrow" src="/img/icons/arrow-left.png"></label>
-            <label for="element1" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right.png"></label>
+            <label for="element4" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
+            <label for="element1" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
 
         </div>
 
