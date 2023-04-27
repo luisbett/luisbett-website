@@ -12,7 +12,7 @@
 
 					<div class="contact-item-title">
 
-						<img src="/img/icons/at.png" alt="At icon">
+						<img src="/img/icons/at-green.png" alt="At icon">
 						<h2>E-mail</h2>
 
 					</div>
@@ -90,12 +90,12 @@
 	}
 
 	.contact-left {
-		height: 90vh;
+		height: 105vh;
 		min-width: 400px;
 	}
 
 	.contact-right {
-		height: 90vh;
+		height: 105vh;
 		min-width: 400px;
 	}
 

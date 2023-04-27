@@ -21,7 +21,7 @@
                 </tr>
 
                 <tr>
-                    <td><img class="links-logo" src="/img/icons/intagram-green.png"></td>
+                    <td><img class="links-logo" src="/img/icons/instagram-green.png"></td>
                     <td class="links-button"><Button label="buttonInstagram" size="large" color="greenGray" @click="openLink('https://www.instagram.com/luis.fellipy/')" /></td>
                 </tr>
 

@@ -14,14 +14,14 @@
 				
 				<div class="about-fullname">
 
-					<img src="/img/icons/fullname.png" alt="fullname-icon">
+					<img src="/img/icons/fullname-green.png" alt="fullname-icon">
 					<h2>Full name: <span class="about-infos">Luis Fellipy Bett</span></h2>
 
 				</div>
 
 				<div class="about-nationality">
 
-					<img src="/img/icons/passport.png" alt="nationality-icon">
+					<img src="/img/icons/passport-green.png" alt="nationality-icon">
 					<h2>Nationality: <span class="about-infos">Brazilian</span></h2>
 
 				</div>
@@ -30,7 +30,7 @@
 
 					<div class="about-location-title">
 						
-						<img src="/img/icons/location.png" alt="location-icon">
+						<img src="/img/icons/location-green.png" alt="location-icon">
 						<h2>Location:</h2>
 
 					</div>
@@ -47,7 +47,7 @@
 
 					<div class="about-carousel-title">
 						
-						<img src="/img/icons/skills.png" alt="skills-icon">
+						<img src="/img/icons/skills-green.png" alt="skills-icon">
 						<h2>Skills:</h2>
 
 					</div>

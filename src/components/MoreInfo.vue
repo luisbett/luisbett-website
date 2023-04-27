@@ -6,9 +6,9 @@
 
 		<div class="moreinfo-subcontainer">
 
-			<Card model="link" title="navbarProjects" titleImg="/img/icons/gear.png" description="prjCodecDsc" buttonLink="/projects"/>
-			<Card model="link" title="navbarLinks" titleImg="/img/icons/internet.png" description="prjCodecDsc" buttonLink="/links"/>
-			<Card model="link" title="navbarContact" titleImg="/img/icons/at.png" description="prjCodecDsc" buttonLink="/contact"/>
+			<Card model="link" title="navbarProjects" titleImg="/img/icons/gear-green.png" description="prjCodecDsc" buttonLink="/projects"/>
+			<Card model="link" title="navbarLinks" titleImg="/img/icons/internet-green.png" description="prjCodecDsc" buttonLink="/links"/>
+			<Card model="link" title="navbarContact" titleImg="/img/icons/at-green.png" description="prjCodecDsc" buttonLink="/contact"/>
 
 		</div>
 

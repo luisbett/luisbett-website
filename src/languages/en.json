@@ -26,6 +26,6 @@
     "buttonApp": "App",
     "buttonCode": "Code",
     "buttonLink": "Go",
-    "thankYouMessage": "Thank you for your message 🙂",
-    "errorMessage": "Sorry, something went wrong 😕"
+    "thankYouMessage": "Thank you for your message",
+    "errorMessage": "Sorry, something went wrong"
 }

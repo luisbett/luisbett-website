@@ -11,7 +11,7 @@
         <div class="carousel-item" id="one">
 
             <h2>HTML</h2>
-            <img class="tech-logo" src="/img/icons/html.png" alt="html-logo">
+            <img class="tech-logo" src="/img/icons/html-green.png" alt="html-logo">
 
             <label for="element5" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
             <label for="element2" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
@@ -21,7 +21,7 @@
         <div class="carousel-item" id="two">
 
             <h2>CSS</h2>
-            <img class="tech-logo" src="/img/icons/css.png" alt="css-logo">
+            <img class="tech-logo" src="/img/icons/css-green.png" alt="css-logo">
 
             <label for="element1" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
             <label for="element3" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
@@ -31,7 +31,7 @@
         <div class="carousel-item" id="three">
 
             <h2>JavaScript</h2>
-            <img class="tech-logo" src="/img/icons/javascript.png" alt="javascript-logo">
+            <img class="tech-logo" src="/img/icons/javascript-green.png" alt="javascript-logo">
 
             <label for="element2" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
             <label for="element4" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
@@ -41,7 +41,7 @@
         <div class="carousel-item" id="four">
 
             <h2>Vue</h2>
-            <img class="tech-logo" src="/img/icons/vue.png" alt="vue-logo">
+            <img class="tech-logo" src="/img/icons/vue-green.png" alt="vue-logo">
 
             <label for="element3" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
             <label for="element5" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
@@ -51,7 +51,7 @@
         <div class="carousel-item" id="five">
 
             <h2>SQL</h2>
-            <img class="tech-logo" src="/img/icons/sql.png" alt="sql-logo">
+            <img class="tech-logo" src="/img/icons/sql-green.png" alt="sql-logo">
 
             <label for="element4" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
             <label for="element1" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>

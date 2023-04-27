@@ -9,8 +9,8 @@
 
         <div v-if="model==='project'" class="technology-container">
             <h3>Technology:</h3>
-            <img v-if="tech === 'JS'" src="/img/icons/javascript.png">
-            <img v-if="tech === 'Vue'" src="/img/icons/vue.png">
+            <img v-if="tech === 'JS'" src="/img/icons/javascript-green.png">
+            <img v-if="tech === 'Vue'" src="/img/icons/vue-green.png">
         </div>
 
         <p v-if="model === 'project'" class="paragraph-project">{{ $t( description ) }}</p>
