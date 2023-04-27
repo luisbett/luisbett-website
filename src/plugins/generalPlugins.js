@@ -7,5 +7,5 @@ export default {
             this.$router.push(srcPath)
         }
       }
-    },
+    }
   }
