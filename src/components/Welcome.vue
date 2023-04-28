@@ -60,7 +60,7 @@
 	.welcome-left h1 {
 		font-size: 60px;
 		margin-top: 100px;
-		margin-left: 100px;
+		margin-left: 150px;
 		text-align: left;
 	}
 
@@ -69,7 +69,7 @@
 	}
 
 	.welcome-left p {
-		margin-left: 100px;
+		margin-left: 150px;
 		text-align: left;
 		font-size: 20px;
 		font-weight: bold;
@@ -78,7 +78,7 @@
 	.welcome-buttons {
 		display: flex;
 		margin-top: 30px;
-		margin-left: 100px;
+		margin-left: 150px;
 	}
 
 	.welcome-buttons > * {
