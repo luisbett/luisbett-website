@@ -23,7 +23,7 @@
 		</div>
 
 		<div class="navbar-barbutton">
-			<img src="/img/icons/bars-white.png" @click="callDropDownMenu">
+			<img id="navbar-barbutton-icon" src="/img/icons/bars-white.png" @click="callDropDownMenu">
 		</div>
 
 		<!-- Dropdown menu used for responsiveness -->
@@ -82,6 +82,16 @@
 				const dropDownMenu = document.querySelector('.navbar-dropdown')
 
 				dropDownMenu.classList.toggle('open')
+
+				if (dropDownMenu.classList.contains('open')) {
+
+					document.getElementById("navbar-barbutton-icon").src="/img/icons/x-white.png"
+
+				} else {
+				
+					document.getElementById("navbar-barbutton-icon").src="/img/icons/bars-white.png"
+
+				}
 			}
 		}
 	}
