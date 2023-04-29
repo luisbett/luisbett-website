@@ -2,11 +2,11 @@
 
     <div class="links-container">
 
-        <h1>{{ $t('linksMessage') }}</h1>
+        <h1>{{ $t('linksTitle') }}</h1>
 
         <div class="links-subcontainer">
             
-            <h2 class="links-subcontainer-title">Follow me on my social media:</h2>
+            <h2 class="links-subcontainer-title">{{ $t('linksSubTitle') }}:</h2>
 
             <table>
 

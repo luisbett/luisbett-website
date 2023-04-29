@@ -8,7 +8,7 @@
         </div>
 
         <div v-if="model==='project'" class="technology-container">
-            <h3>Technology:</h3>
+            <h3>{{ $t('projectsTechnology') }}:</h3>
             <img v-if="tech === 'JS'" src="/img/icons/javascript-green.png">
             <img v-if="tech === 'Vue'" src="/img/icons/vue-green.png">
         </div>
@@ -19,7 +19,7 @@
         <div class="buttons-container">
             <Button v-if="buttonApp" label="buttonApp" size="medium" color="greenGray" @click="$linkExecution(true, buttonApp)"/>
             <Button v-if="buttonCode" label="buttonCode" size="medium" color="greenGray" @click="$linkExecution(true, buttonCode)"/>
-            <Button v-if="buttonLink" label="buttonLink" size="large" color="greenBlack" @click="$linkExecution(false, buttonLink)" />
+            <Button v-if="buttonGo" label="buttonGo" size="large" color="greenBlack" @click="$linkExecution(false, buttonGo)" />
         </div>
 
     </div>
@@ -64,7 +64,7 @@
                 type: String,
                 default: ''
             },
-            buttonLink: {
+            buttonGo: {
                 type: String,
                 default: ''
             }

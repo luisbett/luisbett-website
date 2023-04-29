@@ -2,9 +2,9 @@
 
     <div class="thankyou-container">
 
-        <img src="/img/icons/check-green.png" alt="Green check symbol">
-		<h1>{{ $t('thankYouMessage') }}</h1>
-        <h2>I'll return you soon!</h2>
+        <img src="/img/icons/check-green.png" alt="Green check icon">
+		<h1>{{ $t('thankyouTitle') }}</h1>
+        <h2>{{ $t('thankyouSubTitle') }}!</h2>
         <Button label="Home" size="large" color="greenWhite" imgSrc="/img/icons/house-black.png" @click="$linkExecution(false, '/')" />
 
     </div>

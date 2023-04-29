@@ -4,8 +4,8 @@
 
 		<div class="welcome-left">
 			
-			<h1>{{ $t('homeWelcomeMessage1') }} <br> {{ $t('homeWelcomeMessage2') }} <span>Luis Bett</span>!</h1>
-			<p>Full Stack Developer</p>
+			<h1>{{ $t('welcomeMessage1') }} <br> {{ $t('welcomeMessage2') }} <span>Luis Bett</span>!</h1>
+			<p>{{ $t('welcomeProfessionTitle')}}</p>
 			<div class="welcome-buttons">
 				<Button label="buttonLinkedIn" size="large" color="greenWhite" imgSrc="/img/icons/linkedin-black.png" @click="$linkExecution(true, 'https://www.linkedin.com/in/luis-fellipy-bett/')"/>
 				<Button label="buttonGitHub" size="large" color="greenWhite" imgSrc="/img/icons/github-black.png" @click="$linkExecution(true, 'https://github.com/luisbett')"/>
@@ -15,9 +15,9 @@
 
 		<div class="welcome-right">
 
-			<img class="shape-img" src="/img/circle-outline.png" alt="Image shape">
+			<img class="shape-img" src="/img/circle-outline.png" alt="Shape image">
 			<img class="personal-img" src="/img/personal.png" alt="Personal image">
-			<img class="personal-img-mob" src="/img/personal-mob.jpg" alt="Personal image mobile">
+			<img class="personal-img-mob" src="/img/personal-mob.jpg" alt="Personal mobile image">
 
 		</div>
 

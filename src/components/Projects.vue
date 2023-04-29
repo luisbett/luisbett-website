@@ -2,12 +2,12 @@
 
     <div class="projects-container">
 
-        <h1>{{ $t('projectsMessage') }}</h1>
+        <h1>{{ $t('projectsTitle') }}</h1>
 
         <div class="projects-subcontainer">
             
-            <Card title="luisbett-website" tech="Vue" description="prjCodecDsc" buttonApp="https://luisbett.com/" buttonCode="https://github.com/luisbett/luisbett-website" />
-            <Card title="codec-test" tech="JS" description="prjCodecDsc" buttonCode="https://github.com/luisbett/codec-test" />            
+            <Card title="luisbett-website" tech="Vue" description="projectsWebsiteDsc" buttonApp="https://luisbett.com/" buttonCode="https://github.com/luisbett/luisbett-website" />
+            <Card title="codec-test" tech="JS" description="projectsCodecDsc" buttonCode="https://github.com/luisbett/codec-test" />            
 
         </div>
 

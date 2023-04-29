@@ -1,7 +1,7 @@
 <template>
 
 	<div id="footer">
-		<p>{{ $t('footerMessage') }}</p>
+		<p>{{ $t('footerTitle') }}</p>
 	</div>
 
 </template>

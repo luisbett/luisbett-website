@@ -1,7 +1,7 @@
 <template>
 
     <button v-on="$listeners" :class="[ 'baseButton', size, color ]">
-        <img v-if=imgSrc :src=imgSrc alt="Button Image">
+        <img v-if=imgSrc :src=imgSrc alt="Button icon">
         {{ $t( label ) }}
     </button>
 

@@ -11,50 +11,50 @@
         <div class="carousel-item" id="one">
 
             <h2>HTML</h2>
-            <img class="tech-logo" src="/img/icons/html-green.png" alt="html-logo">
+            <img class="tech-logo" src="/img/icons/html-green.png" alt="HTML icon">
 
-            <label for="element5" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
-            <label for="element2" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
+            <label for="element5" class="previous"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
+            <label for="element2" class="next"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
 
         </div>
 
         <div class="carousel-item" id="two">
 
             <h2>CSS</h2>
-            <img class="tech-logo" src="/img/icons/css-green.png" alt="css-logo">
+            <img class="tech-logo" src="/img/icons/css-green.png" alt="CSS icon">
 
-            <label for="element1" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
-            <label for="element3" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
+            <label for="element1" class="previous"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
+            <label for="element3" class="next"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
 
         </div>
 
         <div class="carousel-item" id="three">
 
             <h2>JavaScript</h2>
-            <img class="tech-logo" src="/img/icons/javascript-green.png" alt="javascript-logo">
+            <img class="tech-logo" src="/img/icons/javascript-green.png" alt="Javascript icon">
 
-            <label for="element2" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
-            <label for="element4" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
+            <label for="element2" class="previous"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
+            <label for="element4" class="next"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
 
         </div>
 
         <div class="carousel-item" id="four">
 
             <h2>Vue</h2>
-            <img class="tech-logo" src="/img/icons/vue-green.png" alt="vue-logo">
+            <img class="tech-logo" src="/img/icons/vue-green.png" alt="Vue icon">
 
-            <label for="element3" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
-            <label for="element5" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
+            <label for="element3" class="previous"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
+            <label for="element5" class="next"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
 
         </div>
 
         <div class="carousel-item" id="five">
 
             <h2>SQL</h2>
-            <img class="tech-logo" src="/img/icons/sql-green.png" alt="sql-logo">
+            <img class="tech-logo" src="/img/icons/sql-green.png" alt="SQL icon">
 
-            <label for="element4" class="pre"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
-            <label for="element1" class="nxt"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
+            <label for="element4" class="previous"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
+            <label for="element1" class="next"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
 
         </div>
 
@@ -120,11 +120,11 @@
         background-color: #404040;
     }
 
-    .left-arrow, .pre {
+    .left-arrow, .previous {
         left: 3px;
     }
 
-    .right-arrow, .nxt {
+    .right-arrow, .next {
         right: 3px;
     }
 
@@ -132,7 +132,7 @@
         display: none;
     }
 
-    .pre, .nxt {
+    .previous, .next {
         width: 12%;
         height: 50%;
         position: absolute;

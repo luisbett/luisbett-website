@@ -2,10 +2,10 @@
 
 	<div id="about-container" class="about-container">
 
-		<h1>{{ $t('homeAboutTitle') }}</h1>
+		<h1>{{ $t('aboutTitle') }}</h1>
 
 		<div class="about-text">
-			<p>{{ $t('abouMeText') }}</p>
+			<p>{{ $t('aboutMeText') }}</p>
 		</div>
 		
 		<div class="about-subcontainer">
@@ -14,15 +14,15 @@
 				
 				<div class="about-fullname">
 
-					<img src="/img/icons/fullname-green.png" alt="fullname-icon">
-					<h2>Full name: <span class="about-infos">Luis Fellipy Bett</span></h2>
+					<img src="/img/icons/fullname-green.png" alt="Person avatar icon">
+					<h2>{{ $t('aboutFullName') }}: <span class="about-infos">Luis Fellipy Bett</span></h2>
 
 				</div>
 
 				<div class="about-nationality">
 
-					<img src="/img/icons/passport-green.png" alt="nationality-icon">
-					<h2>Nationality: <span class="about-infos">Brazilian</span></h2>
+					<img src="/img/icons/passport-green.png" alt="Passport icon">
+					<h2>{{ $t('aboutNationality') }}: <span class="about-infos">Brazilian</span></h2>
 
 				</div>
 				
@@ -30,8 +30,8 @@
 
 					<div class="about-location-title">
 						
-						<img src="/img/icons/location-green.png" alt="location-icon">
-						<h2>Location:</h2>
+						<img src="/img/icons/location-green.png" alt="Pin icon">
+						<h2>{{ $t('aboutLocation') }}:</h2>
 
 					</div>
 
@@ -47,8 +47,8 @@
 
 					<div class="about-carousel-title">
 						
-						<img src="/img/icons/skills-green.png" alt="skills-icon">
-						<h2>Skills:</h2>
+						<img src="/img/icons/skills-green.png" alt="Puzzle icon">
+						<h2>{{ $t('aboutSkills') }}:</h2>
 
 					</div>
 

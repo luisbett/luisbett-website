@@ -4,11 +4,11 @@
 
         <div class="input-container">
 
-            <label for="name">{{ $t('formName') }}</label>
+            <label for="name">{{ $t('formNameTitle') }}</label>
             <input :class="[ nameError ? 'redBorder' : 'grayBorder' ]" type="text" id="name" name="name" v-model="name">
 
             <div v-if="nameError" class="error-container">
-                <img src="/img/icons/error-red.png" alt="Error symbol">
+                <img src="/img/icons/error-red.png" alt="Red error icon">
                 <span>{{ this.nameError }}</span>
             </div>
 
@@ -16,11 +16,11 @@
 
         <div class="input-container">
 
-            <label for="email">{{ $t('formEmail') }}</label>
+            <label for="email">{{ $t('formEmailTitle') }}</label>
             <input :class="[ emailError ? 'redBorder' : 'grayBorder' ]" type="email" id="email" name="email" v-model="email">
 
             <div v-if="emailError" class="error-container">
-                <img src="/img/icons/error-red.png" alt="Error symbol">
+                <img src="/img/icons/error-red.png" alt="Red error icon">
                 <span>{{ this.emailError }}</span>
             </div>
 
@@ -28,11 +28,11 @@
 
         <div class="input-container">
 
-            <label for="phone">{{ $t('formPhone') }}</label>
+            <label for="phone">{{ $t('formPhoneTitle') }}</label>
             <input :class="[ phoneError ? 'redBorder' : 'grayBorder' ]" type="text" id="phone" name="phone" v-model="phone">
             
             <div v-if="phoneError" class="error-container">
-                <img src="/img/icons/error-red.png" alt="Error symbol">
+                <img src="/img/icons/error-red.png" alt="Red error icon">
                 <span>{{ this.phoneError }}</span>
             </div>
 
@@ -40,11 +40,11 @@
 
         <div class="input-container">
 
-            <label for="message">{{ $t('formMessage') }}</label>
+            <label for="message">{{ $t('formMessageTitle') }}</label>
             <textarea :class="[ messageError ? 'redBorder' : 'grayBorder' ]" id="message" name="message" v-model="message" rows="5"></textarea>
             
             <div v-if="messageError" class="error-container">
-                <img src="/img/icons/error-red.png" alt="Error symbol">
+                <img src="/img/icons/error-red.png" alt="Red error icon">
                 <span>{{ this.messageError }}</span>
             </div>
 

@@ -14,7 +14,7 @@
 		</div>
 
 		<div class="navbar-right">
-			<Button label="buttonDownloadCV" size="small" color="greenBlack" @click="downloadCV"/>
+			<Button label="navbarDownloadCV" size="small" color="greenBlack" @click="downloadCV"/>
 			<select v-model="$i18n.locale">
 				<option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang.key">
 					{{ lang.flag + ' ' + lang.title }}
@@ -32,7 +32,7 @@
 			<router-link @click="callDropDownMenu" to="/projects">{{ $t('navbarProjects') }}</router-link>
 			<router-link @click="callDropDownMenu" to="/links">{{ $t('navbarLinks') }}</router-link>
 			<router-link @click="callDropDownMenu" to="/contact">{{ $t('navbarContact') }}</router-link>
-			<Button label="buttonDownloadCV" size="small" color="greenGray" @click="downloadCV"/>
+			<Button label="navbarDownloadCV" size="small" color="greenGray" @click="downloadCV"/>
 			<select v-model="$i18n.locale">
 				<option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang.key">
 					{{ lang.flag + ' ' + lang.title }}

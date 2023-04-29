@@ -2,7 +2,7 @@
 
     <div class="contact-container">
 
-        <h1>{{ $t('formTitle') }}</h1>
+        <h1>{{ $t('contactTitle') }}</h1>
 
         <div class="contact-subcontainer">
             
@@ -13,7 +13,7 @@
 					<div class="contact-item-title">
 
 						<img src="/img/icons/at-green.png" alt="At icon">
-						<h2>E-mail</h2>
+						<h2>{{ $t('contactEmailTitle') }}</h2>
 
 					</div>
 
@@ -26,7 +26,7 @@
 					<div class="contact-item-title">
 
 						<img src="/img/icons/phone-green.png" alt="Phone icon">
-						<h2>Phone</h2>
+						<h2>{{ $t('contactPhoneTitle') }}</h2>
 
 					</div>
 
@@ -39,11 +39,11 @@
 					<div class="contact-item-title">
 
 						<img src="/img/icons/whatsapp-green.png" alt="WhatsApp icon">
-						<h2>WhatsApp</h2>
+						<h2>{{ $t('contactWhatsAppTitle') }}</h2>
 
 					</div>
 
-					<img class="contact-item-img" src="/img/qrcode-4tpws1.png" alt="qrcode-wpp" id="qrcode-wpp">
+					<img class="contact-item-img" src="/img/qrcode-4tpws1.png" alt="WhatsApp qrcode" id="qrcode-wpp">
 
 				</div>
 
@@ -51,7 +51,7 @@
 
             <div class="contact-right">
 
-                <h2>Or leave your message here:</h2>
+                <h2>{{ $t('contactFormTitle') }}:</h2>
                 <Form />
 
             </div>
