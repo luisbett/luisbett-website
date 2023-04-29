@@ -1,7 +1,12 @@
 <template>
 
 	<NavBar />
-	<router-view />
+	<transition 
+		enter-active-class="animate__animated animate__fadeInLeft"
+		leave-active-class="animate__animated animate__fadeOutLeft"
+		mode="out-in">
+		<router-view />
+	</transition>
 	<ScrollTopButton />
 	<Footer />
 
