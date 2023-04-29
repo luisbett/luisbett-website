@@ -25,12 +25,12 @@ const routes = [
 	{
 		path: '/thankyou',
 		name: 'thankyou',
-		component: () => import(/* webpackChunkName: "contact" */ '../views/ThankYouPage.vue')
+		component: () => import(/* webpackChunkName: "thankyou" */ '../views/ThankYouPage.vue')
 	},
 	{
 		path: '/error',
 		name: 'error',
-		component: () => import(/* webpackChunkName: "contact" */ '../views/ErrorPage.vue')
+		component: () => import(/* webpackChunkName: "error" */ '../views/ErrorPage.vue')
 	}
 ]
 

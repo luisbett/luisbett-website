@@ -107,15 +107,28 @@
                         message: this.message,
                     }
 
-                    //Send the email using EmailJS
-                    /*emailjs.send(serviceID, templateID, templateParams, publicKey)
+                    //------------------------------
+                    // Send the email using EmailJS
+                    //------------------------------
+                    emailjs.send(serviceID, templateID, templateParams, publicKey)
+                    
                     .then(function(response) {
-                        console.log('SUCCESS!', response.status, response.text);
+
+                        //Shows the success message on the console
+                        console.log('SUCCESS!', response.status, response.text)
+
+                        //Calls the ThankYou page
                         this.$linkExecution(false, '/thankyou')
+
                     }, function(error) {
-                        console.log('FAILED...', error);
+
+                        //Shows the error message on the console
+                        console.log('FAILED!', error)
+                        
+                        //Calls the Error page
                         this.$linkExecution(false, '/error')
-                    });*/
+
+                    })
 
                 }
 
@@ -139,7 +152,7 @@
                     } else {
                         this.emailError = 'Must be a valid email'
                     }
-                    
+
                 }
 
                 //Phone validation
