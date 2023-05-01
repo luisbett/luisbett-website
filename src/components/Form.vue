@@ -29,12 +29,7 @@
         <div class="input-container">
 
             <label for="phone">{{ $t('formPhoneTitle') }}</label>
-            <input :class="[ phoneError ? 'redBorder' : 'grayBorder' ]" type="text" id="phone" name="phone" v-model="phone">
-            
-            <div v-if="phoneError" class="error-container">
-                <img src="/img/icons/error-red.png" alt="Red error icon">
-                <span>{{ this.phoneError }}</span>
-            </div>
+            <input :class="[ 'grayBorder' ]" type="text" id="phone" name="phone" v-model="phone">
 
         </div>
 
@@ -77,7 +72,6 @@
                 message: '',
                 nameError: '',
                 emailError: '',
-                phoneError: '',
                 messageError: ''
             }
         },
@@ -94,7 +88,7 @@
                 e.preventDefault()
 
                 //Validate form fields
-                if (this.validFields()) {                    
+                if (this.validateFields()) {
 
                     const serviceID = 'service_9ixpaq7'
                     const templateID = 'template_fuvdy3d'
@@ -133,60 +127,84 @@
                 }
 
             },
-            validFields() {
+            validateFields() {
 
                 //Name validation
                 if(!this.name) {
-                    this.nameError = 'Name is required'
+                    this.nameError = this.$t('formNameEmpty')
                 } else {
                     this.nameError = ''
                 }
 
                 //Email validation
                 if(!this.email) {
-                    this.emailError = 'Email is required'
+                    this.emailError = this.$t('formEmailEmpty')
                 } else {
-
-                    if (this.validEmail()) {
-                        this.emailError = ''
-                    } else {
-                        this.emailError = 'Must be a valid email'
-                    }
-
-                }
-
-                //Phone validation
-                if(!this.phone) {
-                    this.phoneError = 'Phone is required'
-                } else {
-                    this.phoneError = ''
+                    //Check if the email is valid
+                    this.validateEmail(this.email)
                 }
 
                 //Message validation
                 if(!this.message) {
-                    this.messageError = 'Message is required'
+                    this.messageError = this.$t('formMessageEmpty')
                 } else {
                     this.messageError = ''
                 }
 
                 //If there is some error
-                if (this.nameError || this.emailError || this.phoneError || this.messageError) {
+                if (this.nameError || this.emailError || this.messageError) {
                     return false
                 } else {
                     return true
                 }
 
             },
-            validEmail() {
+            validateEmail(value) {
 
-                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
-                    return true
+                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+                    this.emailError = ''
                 } else {
-                    return false
+                    this.emailError = this.$t('formEmailInvalid')
                 }
 
             }
-		}
+		},
+        watch: {
+            name(value) {
+
+                this.name = value
+
+                if( !value ) {
+                    this.nameError = this.$t('formNameEmpty')
+                } else {
+                    this.nameError = ''
+                }
+
+            },
+            email(value) {
+                
+                this.email = value
+
+                if( !value ) {
+                    this.emailError = this.$t('formEmailEmpty')
+                } else {
+                    //Check if the email is valid
+                    this.validateEmail(value)
+                }
+
+            },
+            message(value) {
+                
+                this.message = value
+
+                if( !value ) {
+                    this.messageError = this.$t('formMessageEmpty')
+                } else {
+                    this.messageError = ''
+                }
+
+            }
+        }
 	}
 
 </script>
