@@ -106,7 +106,7 @@
                     //------------------------------
                     emailjs.send(serviceID, templateID, templateParams, publicKey)
                     
-                    .then(function(response) {
+                    .then(response => {
 
                         //Shows the success message on the console
                         console.log('SUCCESS!', response.status, response.text)
@@ -114,7 +114,7 @@
                         //Calls the ThankYou page
                         this.$linkExecution(false, '/thankyou')
 
-                    }, function(error) {
+                    }, error => {
 
                         //Shows the error message on the console
                         console.log('FAILED!', error)
