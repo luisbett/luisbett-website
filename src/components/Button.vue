@@ -37,6 +37,8 @@
 
     .baseButton {
         display: flex;
+        align-items: center;
+        justify-content: center;
         border-radius: 10px;
         cursor: pointer;
         transition: .5s;
@@ -61,6 +63,12 @@
     .large {
         padding: 15px 40px;
         font-size: 16px;
+    }
+
+    .extraLarge {
+        width: 180px;
+        height: 60px;
+        font-size: 17px;
     }
     
     .greenBlack {

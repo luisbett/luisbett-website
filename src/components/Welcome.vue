@@ -7,8 +7,8 @@
 			<h1>{{ $t('welcomeMessage1') }} <br> {{ $t('welcomeMessage2') }} <span>Luis Bett</span>!</h1>
 			<p>{{ $t('welcomeProfessionTitle')}}</p>
 			<div class="welcome-buttons">
-				<Button label="buttonLinkedIn" size="large" color="greenWhite" imgSrc="/img/icons/linkedin-black.png" @click="$linkExecution(true, 'https://www.linkedin.com/in/luis-fellipy-bett/')"/>
-				<Button label="buttonGitHub" size="large" color="greenWhite" imgSrc="/img/icons/github-black.png" @click="$linkExecution(true, 'https://github.com/luisbett')"/>
+				<Button label="buttonLinkedIn" size="extraLarge" color="greenWhite" imgSrc="/img/icons/linkedin-black.png" @click="$linkExecution(true, 'https://www.linkedin.com/in/luis-fellipy-bett/')"/>
+				<Button label="buttonGitHub" size="extraLarge" color="greenWhite" imgSrc="/img/icons/github-black.png" @click="$linkExecution(true, 'https://github.com/luisbett')"/>
 			</div>
 
 		</div>
