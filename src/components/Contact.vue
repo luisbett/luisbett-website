@@ -17,7 +17,7 @@
 
 					</div>
 
-					<h3 class="contact-item-content">luisfbett@gmail.com</h3>
+					<h3 class="contact-item-content"><a href="mailto:luisfbett@gmail.com">luisfbett@gmail.com</a></h3>
 
 				</div>
 
