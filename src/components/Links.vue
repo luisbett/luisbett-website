@@ -25,6 +25,11 @@
                     <td class="links-button"><Button label="buttonInstagram" size="large" color="greenGray" @click="$linkExecution(true, 'https://www.instagram.com/luis.fellipy/')" /></td>
                 </tr>
 
+                <tr>
+                    <td><img class="links-logo" src="/img/icons/facebook-green.png"></td>
+                    <td class="links-button"><Button label="buttonFacebook" size="large" color="greenGray" @click="$linkExecution(true, 'https://www.facebook.com/lipy.bett')" /></td>
+                </tr>
+
             </table>
 
         </div>
@@ -57,7 +62,7 @@
 
 	.links-subcontainer {
 		width: 100%;
-		height: 70vh;
+		height: 85vh;
 	}
 
     .links-subcontainer-title {
