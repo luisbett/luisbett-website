@@ -22,7 +22,7 @@
 
                 <tr>
                     <td><img class="links-logo" src="/img/icons/instagram-green.png"></td>
-                    <td class="links-button"><Button label="buttonInstagram" size="large" color="greenGray" @click="$linkExecution(true, 'https://www.instagram.com/luis.fellipy/')" /></td>
+                    <td class="links-button"><Button label="buttonInstagram" size="large" color="greenGray" @click="$linkExecution(true, 'https://www.instagram.com/luisfbett/')" /></td>
                 </tr>
 
                 <tr>

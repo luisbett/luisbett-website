@@ -42,4 +42,12 @@
         margin-top: 80px;
     }
 
+    @media (max-width: 950px) {
+
+        .thankyou-container {
+            height: 110vh;
+        }
+
+    }
+
 </style>

@@ -42,4 +42,12 @@ import Button from './Button.vue'
         margin-top: 80px;
     }
 
+    @media (max-width: 950px) {
+
+        .error-container {
+            height: 110vh;
+        }
+
+    }
+
 </style>
