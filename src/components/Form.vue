@@ -8,7 +8,7 @@
             <input :class="[ nameError ? 'redBorder' : 'grayBorder' ]" type="text" id="name" name="name" v-model="name">
 
             <div v-if="nameError" class="error-container">
-                <img src="/img/icons/error-red.png" alt="Red error icon">
+                <IconAlertCircleFilled color="red" :size="16" stroke-width="2"/>
                 <span>{{ this.nameError }}</span>
             </div>
 
@@ -20,7 +20,7 @@
             <input :class="[ emailError ? 'redBorder' : 'grayBorder' ]" type="email" id="email" name="email" v-model="email">
 
             <div v-if="emailError" class="error-container">
-                <img src="/img/icons/error-red.png" alt="Red error icon">
+                <IconAlertCircleFilled color="red" :size="16" stroke-width="2"/>
                 <span>{{ this.emailError }}</span>
             </div>
 
@@ -39,7 +39,7 @@
             <textarea :class="[ messageError ? 'redBorder' : 'grayBorder' ]" id="message" name="message" v-model="message" rows="5"></textarea>
             
             <div v-if="messageError" class="error-container">
-                <img src="/img/icons/error-red.png" alt="Red error icon">
+                <IconAlertCircleFilled color="red" :size="16" stroke-width="2"/>
                 <span>{{ this.messageError }}</span>
             </div>
 
@@ -47,7 +47,7 @@
 
         <div class="button-container">
 
-            <Button label="formButton" size="large" color="blackWhite" @click="sendEmail($event)"/>
+            <Button label="formButton" size="large" color="blackWhite" @click.prevent="sendEmail"/>
 
         </div>
 
@@ -57,12 +57,14 @@
 
 <script>
 
-	import Button from "./Button.vue"
+    import Button from "./Button.vue"
+    import { IconAlertCircleFilled } from "@tabler/icons-vue"
 
 	export default {
 		name: 'Form',
         components: {
-            Button
+            Button,
+            IconAlertCircleFilled
         },
         data() {
             return {
@@ -83,9 +85,7 @@
             document.head.appendChild(emailJSScript)
         },
 		methods: {
-            sendEmail(e) {
-
-                e.preventDefault()
+            sendEmail() {
 
                 //Validate form fields
                 if (this.validateFields()) {
@@ -267,11 +267,6 @@
         font-size: 14px;
         color: red;
         text-align: left;
-    }
-
-    img {
-        width: 15px;
-        height: 15px;
     }
 
     @media (max-width: 859px) {

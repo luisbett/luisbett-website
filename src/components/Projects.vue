@@ -6,8 +6,8 @@
 
         <div class="projects-subcontainer">
             
-            <Card title="luisbett-website" tech="Vue" description="projectsWebsiteDsc" buttonApp="https://luisbett.com/" buttonCode="https://github.com/luisbett/luisbett-website" />
-            <Card title="codec-test" tech="JS" description="projectsCodecDsc" buttonCode="https://github.com/luisbett/codec-test" />            
+            <Card title="projectsWebsiteTitle" tech="Vue" description="projectsWebsiteDsc" buttonApp="https://luisbett.com/" buttonCode="https://github.com/luisbett/luisbett-website" />
+            <Card title="projectsCodecTitle" tech="JS" description="projectsCodecDsc" buttonCode="https://github.com/luisbett/codec-test" />            
 
         </div>
 

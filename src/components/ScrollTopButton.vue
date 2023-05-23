@@ -1,14 +1,19 @@
 <template>
 
-    <a href="#" class="button-top"><img src="/img/icons/arrow-up-green.png"></a>
+	<a href="#" class="button-top"><IconChevronUp color="#26AF70" :size="30" stroke-width="4"/></a>
 
 </template>
 
 <script>
 
+	import { IconChevronUp } from '@tabler/icons-vue'
+
     export default {
-        name: 'ScrollTopButton'
-    }
+		name: "ScrollTopButton",
+		components: { 
+			IconChevronUp 
+		}
+	}
 
 </script>
 
@@ -27,11 +32,6 @@
 		transition-timing-function: ease;
 		transition-delay: 0s;
 		transition-property: margin-top;
-	}
-
-	.button-top img {
-		width: 30px;
-		height: 30px;
 	}
 
 	.button-top:hover {

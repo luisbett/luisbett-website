@@ -1,7 +1,7 @@
 <template>
 
-    <button v-on="$listeners" :class="[ 'baseButton', size, color ]">
-        <img v-if=imgSrc :src=imgSrc alt="Button icon">
+    <button :class="[ 'baseButton', size, color ]">
+        <slot></slot>
         {{ $t( label ) }}
     </button>
 
@@ -12,10 +12,6 @@
     export default {
         name: 'Button',
         props: {
-            imgSrc: {
-                type: String,
-                default: ''
-            },
             label: {
                 type: String,
                 default: "Click me"
@@ -42,12 +38,7 @@
         border-radius: 10px;
         cursor: pointer;
         transition: .5s;
-    }
-
-    .baseButton img {
-        width: 18px;
-        height: 18px;
-        margin-right: 10px;
+        gap: 5px;
     }
 
     .small {

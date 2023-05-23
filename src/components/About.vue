@@ -14,14 +14,14 @@
 				
 				<div class="about-fullname">
 
-					<img src="/img/icons/fullname-green.png" alt="Person avatar icon">
+					<IconUser class="about-icon" color="#26AF70" :size="30" stroke-width="2"/>
 					<h2>{{ $t('aboutFullName') }}: <span class="about-infos">Luis Fellipy Bett</span></h2>
 
 				</div>
 
 				<div class="about-nationality">
 
-					<img src="/img/icons/passport-green.png" alt="Passport icon">
+					<IconIdBadge class="about-icon" color="#26AF70" :size="30" stroke-width="2"/>
 					<h2>{{ $t('aboutNationality') }}: <span class="about-infos">Brazilian</span></h2>
 
 				</div>
@@ -30,7 +30,7 @@
 
 					<div class="about-location-title">
 						
-						<img src="/img/icons/location-green.png" alt="Pin icon">
+						<IconMapPin class="about-icon" color="#26AF70" :size="30" stroke-width="2"/>
 						<h2>{{ $t('aboutLocation') }}:</h2>
 
 					</div>
@@ -47,7 +47,7 @@
 
 					<div class="about-carousel-title">
 						
-						<img src="/img/icons/skills-green.png" alt="Puzzle icon">
+						<IconPuzzleFilled class="about-icon" color="#26AF70" :size="30" stroke-width="2"/>
 						<h2>{{ $t('aboutSkills') }}:</h2>
 
 					</div>
@@ -71,11 +71,16 @@
 <script>
 
 	import Carousel from './Carousel.vue'
+	import { IconUser, IconIdBadge, IconMapPin, IconPuzzleFilled } from '@tabler/icons-vue'
 
 	export default {
 		name: 'About',
 		components: {
-			Carousel
+			Carousel,
+			IconUser,
+			IconIdBadge,
+			IconMapPin,
+			IconPuzzleFilled
 		}
 	}
 
@@ -142,12 +147,6 @@
 		margin-bottom: 20px;
 	}
 
-	.about-fullname img, .about-nationality img, .about-location img, .about-carousel img {
-		width: 30px;
-		height: 30px;
-		margin-right: 10px;
-	}
-
 	.about-location iframe {
 		width: 55vh;
 		height: 35vh;
@@ -159,6 +158,10 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
+	}
+
+	.about-icon {
+		margin-right: 5px;
 	}
 
 	@media (max-width: 1130px) {

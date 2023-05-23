@@ -7,6 +7,7 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@tabler/icons-vue": "^2.20.0",
     "core-js": "^3.8.3",
     "vue": "^3.2.13",
     "vue-i18n": "^9.2.2",

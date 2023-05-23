@@ -2,10 +2,12 @@
 
     <div class="thankyou-container">
 
-        <img src="/img/icons/check-green.png" alt="Green check icon">
+        <IconCircleCheckFilled color="#26AF70" :size="256" stroke-width="2"/>
 		<h1>{{ $t('thankyouTitle') }}</h1>
         <h2>{{ $t('thankyouSubTitle') }}!</h2>
-        <Button label="Home" size="large" color="greenWhite" imgSrc="/img/icons/house-black.png" @click="$linkExecution(false, '/')" />
+        <Button label="Home" size="large" color="greenWhite" @click="$linkExecution(false, '/')">
+            <IconHome color="black" :size="25" stroke-width="2"/>
+        </Button>
 
     </div>
 
@@ -14,11 +16,14 @@
 <script>
 
     import Button from './Button.vue'
+    import { IconCircleCheckFilled, IconHome } from '@tabler/icons-vue'
 
     export default {
         name: 'ThankYou',
         components: {
-            Button
+            Button,
+            IconCircleCheckFilled,
+            IconHome
         }
     }
 

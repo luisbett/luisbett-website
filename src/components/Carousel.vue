@@ -11,50 +11,55 @@
         <div class="carousel-item" id="one">
 
             <h2>HTML</h2>
-            <img class="tech-logo" src="/img/icons/html-green.png" alt="HTML icon">
+            <IconBrandHtml5 color="#26AF70" :size="256" stroke-width="2"/>
+            <h3>{{ $t( 'carouselExpTitle' ) }}: 3+ {{ $t( 'carouselExpTime' ) }}</h3>
 
-            <label for="element5" class="previous"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
-            <label for="element2" class="next"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
+            <label for="element5" class="previous"><IconChevronLeft class="left-arrow" color="white" :size="50" stroke-width="3"/></label>
+            <label for="element2" class="next"><IconChevronRight class="right-arrow" color="white" :size="50" stroke-width="3"/></label>
 
         </div>
 
         <div class="carousel-item" id="two">
 
             <h2>CSS</h2>
-            <img class="tech-logo" src="/img/icons/css-green.png" alt="CSS icon">
+            <IconBrandCss3 color="#26AF70" :size="256" stroke-width="2"/>
+            <h3>{{ $t( 'carouselExpTitle' ) }}: 3+ {{ $t( 'carouselExpTime' ) }}</h3>
 
-            <label for="element1" class="previous"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
-            <label for="element3" class="next"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
+            <label for="element1" class="previous"><IconChevronLeft class="left-arrow" color="white" :size="50" stroke-width="3"/></label>
+            <label for="element3" class="next"><IconChevronRight class="right-arrow" color="white" :size="50" stroke-width="3"/></label>
 
         </div>
 
         <div class="carousel-item" id="three">
 
             <h2>JavaScript</h2>
-            <img class="tech-logo" src="/img/icons/javascript-green.png" alt="Javascript icon">
+            <IconBrandJavascript color="#26AF70" :size="256" stroke-width="2"/>
+            <h3>{{ $t( 'carouselExpTitle' ) }}: 2+ {{ $t( 'carouselExpTime' ) }}</h3>
 
-            <label for="element2" class="previous"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
-            <label for="element4" class="next"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
+            <label for="element2" class="previous"><IconChevronLeft class="left-arrow" color="white" :size="50" stroke-width="3"/></label>
+            <label for="element4" class="next"><IconChevronRight class="right-arrow" color="white" :size="50" stroke-width="3"/></label>
 
         </div>
 
         <div class="carousel-item" id="four">
 
             <h2>Vue</h2>
-            <img class="tech-logo" src="/img/icons/vue-green.png" alt="Vue icon">
+            <IconBrandVue color="#26AF70" :size="256" stroke-width="2"/>
+            <h3>{{ $t( 'carouselExpTitle' ) }}: 1+ {{ $t( 'carouselExpTime' ) }}</h3>
 
-            <label for="element3" class="previous"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
-            <label for="element5" class="next"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
+            <label for="element3" class="previous"><IconChevronLeft class="left-arrow" color="white" :size="50" stroke-width="3"/></label>
+            <label for="element5" class="next"><IconChevronRight class="right-arrow" color="white" :size="50" stroke-width="3"/></label>
 
         </div>
 
         <div class="carousel-item" id="five">
 
             <h2>SQL</h2>
-            <img class="tech-logo" src="/img/icons/sql-green.png" alt="SQL icon">
+            <IconDatabase color="#26AF70" :size="256" stroke-width="2"/>
+            <h3>{{ $t( 'carouselExpTitle' ) }}: 5+ {{ $t( 'carouselExpTime' ) }}</h3>
 
-            <label for="element4" class="previous"><img class="left-arrow" src="/img/icons/arrow-left-white.png"></label>
-            <label for="element1" class="next"><img class="right-arrow" src="/img/icons/arrow-right-white.png"></label>
+            <label for="element4" class="previous"><IconChevronLeft class="left-arrow" color="white" :size="50" stroke-width="3"/></label>
+            <label for="element1" class="next"><IconChevronRight class="right-arrow" color="white" :size="50" stroke-width="3"/></label>
 
         </div>
 
@@ -74,8 +79,25 @@
 
 <script>
 
+    import { IconBrandHtml5 } from '@tabler/icons-vue'
+    import { IconBrandCss3 } from '@tabler/icons-vue'
+    import { IconBrandJavascript } from '@tabler/icons-vue'
+    import { IconBrandVue } from '@tabler/icons-vue'
+    import { IconDatabase } from '@tabler/icons-vue'
+    import { IconChevronLeft } from '@tabler/icons-vue'
+    import { IconChevronRight } from '@tabler/icons-vue'
+
     export default {
-        name: 'Carousel'
+        name: "Carousel",
+        components: {
+            IconBrandHtml5,
+            IconBrandCss3,
+            IconBrandJavascript,
+            IconBrandVue,
+            IconDatabase,
+            IconChevronLeft,
+            IconChevronRight
+        }
     }
 
 </script>
@@ -96,11 +118,6 @@
         height: 100%;
         position: absolute;
         padding: 10px;
-    }
-
-    .tech-logo {
-        width: 256px;
-        height: 256px;
     }
 
     .left-arrow, .right-arrow {

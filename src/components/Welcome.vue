@@ -7,8 +7,12 @@
 			<h1>{{ $t('welcomeMessage1') }} <br> {{ $t('welcomeMessage2') }} <span>Luis Bett</span>!</h1>
 			<p>{{ $t('welcomeProfessionTitle')}}</p>
 			<div class="welcome-buttons">
-				<Button label="buttonLinkedIn" size="extraLarge" color="greenWhite" imgSrc="/img/icons/linkedin-black.png" @click="$linkExecution(true, 'https://www.linkedin.com/in/luis-fellipy-bett/')"/>
-				<Button label="buttonGitHub" size="extraLarge" color="greenWhite" imgSrc="/img/icons/github-black.png" @click="$linkExecution(true, 'https://github.com/luisbett')"/>
+				<Button label="buttonLinkedIn" size="extraLarge" color="greenWhite" @click="$linkExecution(true, 'https://www.linkedin.com/in/luis-fellipy-bett/')">
+					<IconBrandLinkedin color="black" :size="30" stroke-width="2"/>
+				</Button>
+				<Button label="buttonGitHub" size="extraLarge" color="greenWhite" @click="$linkExecution(true, 'https://github.com/luisbett')">
+					<IconBrandGithub color="black" :size="30" stroke-width="2"/>
+				</Button>
 			</div>
 
 		</div>
@@ -28,11 +32,14 @@
 <script>
 
 	import Button from './Button.vue'
+	import { IconBrandLinkedin, IconBrandGithub } from '@tabler/icons-vue'
 
 	export default {
 		name: 'Welcome',
 		components: {
-			Button
+			Button,
+			IconBrandLinkedin,
+			IconBrandGithub
 		}
 	}
 

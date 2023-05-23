@@ -12,7 +12,7 @@
 
 					<div class="contact-item-title">
 
-						<img src="/img/icons/at-green.png" alt="At icon">
+						<IconAt class="contact-item-icon" color="#26AF70" :size="30" stroke-width="2"/>
 						<h2>{{ $t('contactEmailTitle') }}</h2>
 
 					</div>
@@ -25,7 +25,7 @@
 
 					<div class="contact-item-title">
 
-						<img src="/img/icons/phone-green.png" alt="Phone icon">
+						<IconPhoneFilled class="contact-item-icon" color="#26AF70" :size="30" stroke-width="2"/>
 						<h2>{{ $t('contactPhoneTitle') }}</h2>
 
 					</div>
@@ -38,12 +38,12 @@
 
 					<div class="contact-item-title">
 
-						<img src="/img/icons/whatsapp-green.png" alt="WhatsApp icon">
+						<IconBrandWhatsapp class="contact-item-icon" color="#26AF70" :size="30" stroke-width="2"/>
 						<h2>{{ $t('contactWhatsAppTitle') }}</h2>
 
 					</div>
 
-					<img class="contact-item-img" src="/img/qrcode-4tpws1.png" alt="WhatsApp qrcode" id="qrcode-wpp">
+					<img class="contact-item-qrcode" src="/img/qrcode-4tpws1.png" alt="WhatsApp qrcode" id="qrcode-wpp">
 
 				</div>
 
@@ -65,11 +65,15 @@
 <script>
 
 	import Form from "../components/Form.vue"
+	import { IconAt, IconPhoneFilled, IconBrandWhatsapp } from "@tabler/icons-vue"
 
 	export default {
 		name: 'Contact',
 		components: {
-			Form
+			Form,
+			IconAt,
+			IconPhoneFilled,
+			IconBrandWhatsapp
 		}
 	}
 
@@ -119,12 +123,7 @@
 		align-items: center;
 		justify-content: center;
 		margin-bottom: 10px;
-	}
-
-	.contact-item-title img {
-		width: 25px;
-		height: 25px;
-		margin-right: 10px;
+		gap: 5px;
 	}
 
 	.contact-item-content {
@@ -134,7 +133,7 @@
 		color: #26AF70;
 	}
 
-	.contact-item-img {
+	.contact-item-qrcode {
 		width: 40%;
 		height: 40%;
 		padding: 10px;

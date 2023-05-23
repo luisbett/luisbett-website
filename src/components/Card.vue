@@ -3,14 +3,14 @@
     <div :class="[ 'card-container', model === 'project' ? 'gray' : 'darkGray' ]">
 
         <div class="title-container">
-            <img v-if="model !== 'project'" :src="titleImg">
+            <slot></slot>
             <h2>{{ $t( title ) }}</h2>
         </div>
 
         <div v-if="model==='project'" class="technology-container">
             <h3>{{ $t('projectsTechnology') }}:</h3>
-            <img v-if="tech === 'JS'" src="/img/icons/javascript-green.png">
-            <img v-if="tech === 'Vue'" src="/img/icons/vue-green.png">
+            <IconBrandJavascript v-if="tech === 'JS'" class="technology-icon" color="#26AF70" :size="30" stroke-width="2"/>
+            <IconBrandVue v-if="tech === 'Vue'" class="technology-icon" color="#26AF70" :size="25" stroke-width="2"/>
         </div>
 
         <p v-if="model === 'project'" class="paragraph-project">{{ $t( description ) }}</p>
@@ -29,11 +29,14 @@
 <script>
 
     import Button from './Button.vue'
+    import { IconBrandJavascript, IconBrandVue } from '@tabler/icons-vue'
 
     export default {
         name: 'Card',
         components: {
-            Button
+            Button,
+            IconBrandJavascript,
+            IconBrandVue
         },
         props: {
             model: {
@@ -43,10 +46,6 @@
             title: {
                 type: String,
                 default: 'Card'
-            },
-            titleImg: {
-                type: String,
-                default: ''
             },
             tech: {
                 type: String,
@@ -95,18 +94,13 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 5px;
     }
 
     .title-container img {
         width: 10%;
         height: 10%;
         margin-right: 10px;
-    }
-
-    .technology-container img {
-        width: 10%;
-        height: 10%;
-        margin-left: 10px;
     }
 
     .paragraph-project {
@@ -121,6 +115,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 5px;
     }
 
     .buttons-container {

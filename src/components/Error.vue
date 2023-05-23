@@ -2,10 +2,12 @@
 
     <div class="error-container">
 
-        <img src="/img/icons/x-red.png" alt="Red x icon">
+        <IconCircleXFilled color="red" :size="256" stroke-width="2"/>
 		<h1>{{ $t('errorTitle') }}</h1>
         <h2>{{ $t('errorSubTitle') }}!</h2>
-        <Button label="Home" size="large" color="greenWhite" imgSrc="/img/icons/house-black.png" @click="$linkExecution(false, '/')" />
+        <Button label="Home" size="large" color="greenWhite" @click="$linkExecution(false, '/')">
+            <IconHome color="black" :size="25" stroke-width="2"/>
+        </Button>
 
     </div>
 
@@ -13,12 +15,15 @@
 
 <script>
 
-import Button from './Button.vue'
+    import Button from './Button.vue'
+    import { IconCircleXFilled, IconHome } from '@tabler/icons-vue'
 
     export default {
         name: 'Error',
         components: {
-            Button
+            Button,
+            IconCircleXFilled,
+            IconHome
         }
     }
 

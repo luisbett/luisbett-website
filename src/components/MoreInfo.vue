@@ -6,9 +6,15 @@
 
 		<div class="moreinfo-subcontainer">
 
-			<Card model="link" title="navbarProjects" titleImg="/img/icons/gear-green.png" description="moreInfoProjectsDesc" buttonGo="/projects"/>
-			<Card model="link" title="navbarLinks" titleImg="/img/icons/internet-green.png" description="moreInfoLinksDesc" buttonGo="/links"/>
-			<Card model="link" title="navbarContact" titleImg="/img/icons/at-green.png" description="moreInfoContactDesc" buttonGo="/contact"/>
+			<Card model="link" title="navbarProjects" description="moreInfoProjectsDesc" buttonGo="/projects">
+				<IconSettings color="#26AF70" :size="25" stroke-width="2"/>
+			</Card>
+			<Card model="link" title="navbarLinks" description="moreInfoLinksDesc" buttonGo="/links">
+				<IconWorld color="#26AF70" :size="25" stroke-width="2"/>
+			</Card>
+			<Card model="link" title="navbarContact" description="moreInfoContactDesc" buttonGo="/contact">
+				<IconAt color="#26AF70" :size="25" stroke-width="2"/>
+			</Card>
 
 		</div>
 
@@ -19,11 +25,15 @@
 <script>
 
 	import Card from './Card.vue'
+	import { IconSettings, IconWorld, IconAt } from '@tabler/icons-vue'
 
 	export default {
 		name: 'MoreInfo',
 		components: {
-			Card
+			Card,
+			IconSettings,
+			IconWorld,
+			IconAt
 		}
 	}
 

@@ -11,22 +11,22 @@
             <table>
 
                 <tr>
-                    <td><img class="links-logo" src="/img/icons/linkedin-green.png"></td>
+                    <td><IconBrandLinkedin color="#26AF70" :size="50" stroke-width="2"/></td>
                     <td class="links-button"><Button class="links-button" label="buttonLinkedIn" size="large" color="greenGray" @click="$linkExecution(true, 'https://www.linkedin.com/in/luis-fellipy-bett/')" /></td>
                 </tr>
 
                 <tr>
-                    <td><img class="links-logo" src="/img/icons/github-green.png"></td>
+                    <td><IconBrandGithub color="#26AF70" :size="50" stroke-width="2"/></td>
                     <td class="links-button"><Button class="links-button" label="buttonGitHub" size="large" color="greenGray" @click="$linkExecution(true, 'https://github.com/luisbett')" /></td>
                 </tr>
 
                 <tr>
-                    <td><img class="links-logo" src="/img/icons/instagram-green.png"></td>
+                    <td><IconBrandInstagram color="#26AF70" :size="50" stroke-width="2"/></td>
                     <td class="links-button"><Button label="buttonInstagram" size="large" color="greenGray" @click="$linkExecution(true, 'https://www.instagram.com/luisfbett/')" /></td>
                 </tr>
 
                 <tr>
-                    <td><img class="links-logo" src="/img/icons/facebook-green.png"></td>
+                    <td><IconBrandFacebook color="#26AF70" :size="50" stroke-width="2"/></td>
                     <td class="links-button"><Button label="buttonFacebook" size="large" color="greenGray" @click="$linkExecution(true, 'https://www.facebook.com/lipy.bett')" /></td>
                 </tr>
 
@@ -41,11 +41,16 @@
 <script>
 
     import Button from './Button.vue'
+    import { IconBrandLinkedin, IconBrandGithub, IconBrandInstagram, IconBrandFacebook } from '@tabler/icons-vue'
 
     export default {
         name: 'Links',
         components: {
-            Button
+            Button,
+            IconBrandLinkedin,
+            IconBrandGithub,
+            IconBrandInstagram,
+            IconBrandFacebook
         }
     }
 
@@ -81,11 +86,6 @@
         padding: 20px;
         background-color: #262626;
         box-shadow: 5px 5px 5px #0D0D0D;
-    }
-
-    .links-logo {
-        width: 45px;
-        height: 45px;
     }
 
     .links-button {

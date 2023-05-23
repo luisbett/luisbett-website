@@ -23,7 +23,8 @@
 		</div>
 
 		<div class="navbar-barbutton">
-			<img id="navbar-barbutton-icon" src="/img/icons/bars-white.png" @click="callDropDownMenu">
+			<IconX v-if="dropMenuActive" color="white" :size="40" stroke-width="3" @click="callDropDownMenu"/>
+			<IconMenu2 v-else color="white" :size="40" stroke-width="3" @click="callDropDownMenu"/>
 		</div>
 
 		<!-- Dropdown menu used for responsiveness -->
@@ -47,14 +48,18 @@
 <script>
 
 	import Button from './Button.vue'
+	import { IconX, IconMenu2 } from '@tabler/icons-vue'
 
 	export default {
 		name: 'NavBar',
 		components: {
-			Button
+			Button,
+			IconX,
+			IconMenu2
 		},
 		data() {
 			return {
+				dropMenuActive: false,
 				langs: [
 					{ key: 'en', title: 'English', flag: '🇺🇸' },
 					{ key: 'pt_br', title: 'Portuguese', flag: '🇧🇷' },
@@ -85,11 +90,11 @@
 
 				if (dropDownMenu.classList.contains('open')) {
 
-					document.getElementById("navbar-barbutton-icon").src="/img/icons/x-white.png"
+					this.dropMenuActive = true
 
 				} else {
 				
-					document.getElementById("navbar-barbutton-icon").src="/img/icons/bars-white.png"
+					this.dropMenuActive = false
 
 				}
 			}
@@ -163,11 +168,6 @@
 	.navbar-barbutton {
 		display: none;
 		cursor: pointer;
-	}
-
-	.navbar-barbutton img {
-		width: 40px;
-		height: 40px;
 	}
 
 	.navbar-dropdown {
