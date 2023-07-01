@@ -50,16 +50,15 @@
 	.welcome-container {
 		display: flex;
 		padding: 30px;
+		min-height: 85vh;
 	}
 
 	.welcome-left {
 		width: 50%;
-		height: 80vh;
 	}
 
 	.welcome-right {
 		width: 50%;
-		height: 80vh;
 		position: relative;
 		z-index: -1;
 	}
@@ -123,12 +122,10 @@
 
 		.welcome-left {
 			width: 100%;
-			height: 70vh;
 		}
 
 		.welcome-right {
 			width: 100%;
-			height: 50vh;
 		}
 
 		.welcome-left h1 {

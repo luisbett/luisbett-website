@@ -39,7 +39,7 @@
 
 	.projects-subcontainer {
         width: 80%;
-		height: 60vh;
+		min-height: 60vh;
         display: flex;
         justify-content: space-evenly;
         flex-wrap: wrap;
@@ -53,7 +53,6 @@
     @media (max-width: 819px) {
 
         .projects-subcontainer {
-            height: 110vh;
             justify-content: center;
         }
 

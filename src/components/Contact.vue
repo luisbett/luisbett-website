@@ -94,12 +94,12 @@
 	}
 
 	.contact-left {
-		height: 105vh;
+		min-height: 90vh;
 		min-width: 400px;
 	}
 
 	.contact-right {
-		height: 105vh;
+		min-height: 90vh;
 		min-width: 400px;
 	}
 

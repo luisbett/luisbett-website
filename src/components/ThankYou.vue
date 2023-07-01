@@ -35,7 +35,7 @@
 		display: block;
 		padding: 30px;
 		width: 100%;
-		height: 80vh;
+		min-height: 80vh;
         text-align: center;
 	}
 
@@ -45,14 +45,6 @@
 
     .thankyou-container button {
         margin-top: 80px;
-    }
-
-    @media (max-width: 950px) {
-
-        .thankyou-container {
-            height: 110vh;
-        }
-
     }
 
 </style>

@@ -67,7 +67,7 @@
 
 	.links-subcontainer {
 		width: 100%;
-		height: 85vh;
+		min-height: 75vh;
 	}
 
     .links-subcontainer-title {

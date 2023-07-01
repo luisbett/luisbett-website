@@ -22,7 +22,7 @@
 				<div class="about-nationality">
 
 					<IconIdBadge class="about-icon" color="#26AF70" :size="30" stroke-width="2"/>
-					<h2>{{ $t('aboutNationality') }}: <span class="about-infos">Brazilian</span></h2>
+					<h2>{{ $t('aboutNationality') }}: <span class="about-infos">{{ $t('aboutNationalityDesc') }}</span></h2>
 
 				</div>
 				
@@ -103,8 +103,8 @@
 
 	.about-text {
 		width: 80%;
-		height: 40vh;
-		margin: auto;
+		min-height: 40vh;
+		margin: 30px auto;
 	}
 
 	.about-text p {
@@ -119,11 +119,11 @@
 	.about-left, .about-right {
 		padding: 10px 50px;
 		width: 50%;
-		height: 70vh;
+		min-height: 75vh;
 	}
 
 	.about-fullname, .about-nationality, .about-location, .about-carousel {
-		padding: 15px;
+		padding: 16px;
 		background-color: #191919;
 		border-radius: 10px;
 		margin-bottom: 20px;
@@ -168,14 +168,7 @@
 
 		.about-location iframe {
 			width: 35vh;
-			height: 40vh;
-		}
-	}
-
-	@media (max-width: 1000px) {
-
-		.about-text {
-			height: 60vh;
+			min-height: 40vh;
 		}
 	}
 
@@ -187,25 +180,15 @@
 
 		.about-left {
 			width: 100%;
-			height: 90vh;
 			padding: 10px 10px;
 		}
 
 		.about-right {
 			width: 100%;
-			height: 70vh;
 		}
 
 		.about-location iframe {
 			width: 55vh;
-			height: 35vh;
-		}
-	}
-
-	@media (max-width: 730px) {
-
-		.about-text {
-			height: 130vh;
 		}
 	}
 
@@ -213,9 +196,7 @@
 
 		.about-location iframe {
 			width: 35vh;
-			height: 40vh;
 		}
-
 	}
 
 </style>

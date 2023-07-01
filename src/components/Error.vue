@@ -36,7 +36,7 @@
 		padding: 30px;
         text-align: center;
 		width: 100%;
-		height: 80vh;
+		min-height: 80vh;
 	}
 
     .error-container > * {
@@ -45,14 +45,6 @@
 
     .error-container button {
         margin-top: 80px;
-    }
-
-    @media (max-width: 950px) {
-
-        .error-container {
-            height: 110vh;
-        }
-
     }
 
 </style>

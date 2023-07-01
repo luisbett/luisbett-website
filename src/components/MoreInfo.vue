@@ -56,7 +56,7 @@
 
 	.moreinfo-subcontainer {
 		width: 80%;
-		height: 60vh;
+		min-height: 60vh;
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
@@ -70,7 +70,6 @@
     @media (max-width: 1199px) {
 
         .moreinfo-subcontainer {
-            height: 110vh;
             justify-content: space-evenly;
         }
 
@@ -79,7 +78,6 @@
     @media (max-width: 819px) {
 
         .moreinfo-subcontainer {
-            height: 160vh;
             justify-content: center;
         }
 
