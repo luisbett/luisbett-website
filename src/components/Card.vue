@@ -11,6 +11,7 @@
             <h3>{{ $t('projectsTechnology') }}:</h3>
             <IconBrandJavascript v-if="tech === 'JS'" class="technology-icon" color="#26AF70" :size="30" stroke-width="2"/>
             <IconBrandVue v-if="tech === 'Vue'" class="technology-icon" color="#26AF70" :size="25" stroke-width="2"/>
+            <IconBrandReact v-if="tech === 'React'" class="technology-icon" color="#26AF70" :size="25" stroke-width="2"/>
         </div>
 
         <p v-if="model === 'project'" class="paragraph-project">{{ $t( description ) }}</p>
@@ -29,14 +30,15 @@
 <script>
 
     import Button from './Button.vue'
-    import { IconBrandJavascript, IconBrandVue } from '@tabler/icons-vue'
+    import { IconBrandJavascript, IconBrandVue, IconBrandReact } from '@tabler/icons-vue'
 
     export default {
         name: 'Card',
         components: {
             Button,
             IconBrandJavascript,
-            IconBrandVue
+            IconBrandVue,
+            IconBrandReact
         },
         props: {
             model: {
@@ -95,6 +97,10 @@
         justify-content: center;
         align-items: center;
         gap: 5px;
+    }
+
+    .title-container h2 {
+        font-size: clamp(21px, 1.5vw, 30px);
     }
 
     .title-container img {

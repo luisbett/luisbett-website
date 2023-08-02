@@ -7,7 +7,8 @@
         <div class="projects-subcontainer">
             
             <Card title="projectsWebsiteTitle" tech="Vue" description="projectsWebsiteDsc" buttonApp="https://luisbett.com/" buttonCode="https://github.com/luisbett/luisbett-website" />
-            <Card title="projectsCodecTitle" tech="JS" description="projectsCodecDsc" buttonCode="https://github.com/luisbett/codec-test" />            
+            <Card title="projectsCodecTitle" tech="JS" description="projectsCodecDsc" buttonCode="https://github.com/luisbett/codec-test" />
+            <Card title="projectsGitFinderTitle" tech="React" description="projectsGitFinderDsc" buttonApp="https://luisbett-github-user-finder.netlify.app/" buttonCode="https://github.com/luisbett/github-user-finder" />
 
         </div>
 
