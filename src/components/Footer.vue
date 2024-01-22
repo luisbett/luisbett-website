@@ -24,6 +24,7 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
+		font-size: 14px;
 		bottom: 0;
 		width: 100%;
 	}

@@ -9,6 +9,7 @@
             <Card title="projectsWebsiteTitle" tech="Vue" description="projectsWebsiteDsc" buttonApp="https://luisbett.com/" buttonCode="https://github.com/luisbett/luisbett-website" />
             <Card title="projectsCodecTitle" tech="JS" description="projectsCodecDsc" buttonCode="https://github.com/luisbett/codec-test" />
             <Card title="projectsGitFinderTitle" tech="React" description="projectsGitFinderDsc" buttonApp="https://luisbett-github-user-finder.netlify.app/" buttonCode="https://github.com/luisbett/github-user-finder" />
+            <Card title="projectsWeathermomTitle" tech="React" description="projectsWeathermomDsc" buttonApp="https://luisbett-weathermom.netlify.app/" buttonCode="https://github.com/luisbett/weathermom" />
 
         </div>
 

@@ -19,7 +19,6 @@
 
 		<div class="welcome-right">
 
-			<img class="shape-img" src="/img/circle-outline.png" alt="Shape image">
 			<img class="personal-img" src="/img/personal.png" alt="Personal image">
 			<img class="personal-img-mob" src="/img/personal-mob.jpg" alt="Personal mobile image">
 
@@ -50,7 +49,7 @@
 	.welcome-container {
 		display: flex;
 		padding: 30px;
-		min-height: 85vh;
+		min-height: 95vh;
 	}
 
 	.welcome-left {
@@ -63,8 +62,6 @@
 
 	.welcome-right {
 		width: 50%;
-		position: relative;
-		z-index: -1;
 		margin: auto;
 	}
 
@@ -89,18 +86,9 @@
 		margin-top: 30px;
 	}
 
-	.shape-img {
-		position: relative;
-		top: 130px;
-		left: 40px;
-	}
-
 	.personal-img {
-		position: absolute;
-		top: 0;
-		left: 95px;
-		width: 403px;
-		height: 644px;
+		width: 600px;
+		height: 600px;
 	}
 
 	.personal-img-mob {
@@ -129,10 +117,6 @@
 
 		.welcome-buttons {
 			flex-direction: column;
-		}
-
-		.shape-img {
-			display: none;
 		}
 
 		.personal-img {

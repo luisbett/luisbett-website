@@ -7,7 +7,7 @@
     "welcomeMessage": "¡Hola, soy ",
     "welcomeProfessionTitle": "Desarrollador Full Stack",
     "aboutTitle": "Sobre mi",
-    "aboutMeText": "Nacido en Joinville, Santa Catarina, Brasil y actualmente viviendo en Dublin. Soy una persona apasionada por la tecnología, el deporte y la música. Empecé a estudiar desarrollo de software en bachillerato ya que adicional a las materias de tronco común estudié un curso técnico en informática. Después del bachillerato, ingresé a la universidad y empecé a estudiar un curso técnico en Análisis y Desarrollo de Sistemas. Mientras estaba en la universidad conseguí mi primer trabajo como desarrollador en NG Informática. Después de 5 años de trabajo decidí venir a Dublín, Irlanda para estudiar inglés. Desde entonces me apasiona el estilo de vida europeo y estoy buscando mi primera oportunidad de trabajo fuera de Brasil.",
+    "aboutMeText": "Nací en Joinville, Santa Catarina, Brasil, y actualmente resido en Mullingar, Irlanda. Me apasiona la tecnología, los deportes y la música. Mi trayectoria en el desarrollo de software comenzó en la escuela secundaria, donde, junto con la educación regular, asistí a un curso técnico en desarrollo de software. Después de la escuela secundaria, ingresé a la universidad, donde estudié Análisis y Desarrollo de Sistemas. Durante mis años universitarios, conseguí mi primer trabajo como desarrollador de software en NG Informática. Después de cinco años de experiencia valiosa, tomé la decisión de mudarme a Dublín, Irlanda, para continuar mis estudios y mejorar mi inglés. En 1 año y 6 meses, fui contratado por Writech Group y me trasladé a Mullingar. Desde entonces, me he dedicado al aprendizaje continuo en el desarrollo web, explorando tecnologías como React, React Native, Vue JS y Node JS.",
     "aboutFullName": "Nombre completo",
     "aboutNationality": "Nacionalidad",
     "aboutNationalityDesc": "Brasileña",
@@ -27,6 +27,8 @@
     "projectsCodecDsc": "Aplicación que recibe un comando y simula el movimiento de un robot en Marte, mostrando su posición final",
     "projectsGitFinderTitle": "github-user-finder",
     "projectsGitFinderDsc": "Aplicación que recibe el nombre de un usuario de Github y devuelve su información",
+    "projectsWeathermomTitle": "weathermom",
+    "projectsWeathermomDsc": "Aplicación que proporciona información meteorológica actuando como una madre cuidadosa",
     "linksTitle": "Vamos a conectar!",
     "linksSubTitle": "Sígueme en mis redes sociales",
     "contactTitle": "Contacto",
@@ -54,5 +56,5 @@
     "buttonGo": "Ir",
     "buttonApp": "App",
     "buttonCode": "Código",
-    "footerTitle": "2023 Luis Fellipy Bett. Todos los Derechos Reservados."
+    "footerTitle": "© 2023-2024, Luis Fellipy Bett. Todos los Derechos Reservados."
 }

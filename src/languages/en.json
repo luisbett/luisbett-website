@@ -7,7 +7,7 @@
     "welcomeMessage": "Hello, I am ",
     "welcomeProfessionTitle": "Full Stack Developer",
     "aboutTitle": "About me",
-    "aboutMeText": "Born in Joinville, Santa Catarina, Brazil and currently living in Dublin. I am a person passionate about technology, sport and music. I started studying software development in high school when with the regular education I attended a technical computer course. After high school I started at the university studying a technical course in Analysis and Systems Development. While I was at university I got my first job as a software developer at  NG Informática. After 5 years of work I decided to come to Dublin, Ireland to study English. Since then I am passionate about the European lifestyle and I am looking for my first job opportunity outside Brazil.",
+    "aboutMeText": "I was born in Joinville, Santa Catarina, Brazil, and currently reside in Mullingar, Ireland. I am passionate about technology, sports, and music. My journey into software development began in high school, where I attended a technical vocational training course alongside my regular education. After high school, I pursued a degree in Analysis and Systems Development at the university. During my university years, I secured my first job as a software developer at NG Informática. After five years of valuable experience, I made the decision to move to Dublin, Ireland, to further my studies and enhance my English skills. Within 1 year and 6 months, I had the opportunity to join Writech Group, and I relocated to Mullingar. Since then, I have been dedicated to continuous learning in web development, exploring technologies such as React, React Native, Vue JS, and Node JS.",
     "aboutFullName": "Full name",
     "aboutNationality": "Nationality",
     "aboutNationalityDesc": "Brazilian",
@@ -27,6 +27,8 @@
     "projectsCodecDsc": "Application that receives a command and simulates the movement of a robot on Mars, displaying its final position",
     "projectsGitFinderTitle": "github-user-finder",
     "projectsGitFinderDsc": "Application that receives the name of a GitHub user and returns their information",
+    "projectsWeathermomTitle": "weathermom",
+    "projectsWeathermomDsc": "Application that provides weather information acting as a caring mother",
     "linksTitle": "Let's connect!",
     "linksSubTitle": "Follow me on my social media",
     "contactTitle": "Get in touch",
@@ -54,5 +56,5 @@
     "buttonGo": "Go",
     "buttonApp": "App",
     "buttonCode": "Code",
-    "footerTitle": "2023 Luis Fellipy Bett. All Rights Reserved."
+    "footerTitle": "© 2023-2024, Luis Fellipy Bett. All Rights Reserved."
 }

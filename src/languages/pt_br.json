@@ -7,7 +7,7 @@
     "welcomeMessage": "Olá, eu sou o ",
     "welcomeProfessionTitle": "Desenvolvedor Full Stack",
     "aboutTitle": "Sobre mim",
-    "aboutMeText": "Nascido em Joinville, Santa Catarina, Brazil e atualmente vivendo em Dublin. Sou uma pessoa apaixonada por tecnologia, esporte e música. Comecei a estudar desenvolvimento de software no ensino médio quando junto com o ensino regular pude cursar um técnico em informática. Após o ensino médio entrei na universidade e fiz um tecnólogo em Análise e Desenvolvimento de Sistemas. Enquanto estava na universidade consegui meu primeiro emprego como desenvolvedor na NG Informática. Após 5 anos de trabalho decidi vir para Dublin, Irlanda para estudar inglês. Desde então sou apaixonado pelo estilo de vida europeu e busco minha primeira oportunidade de trabalho fora do Brasil.",
+    "aboutMeText": "Nasci em Joinville, Santa Catarina, Brasil, e atualmente moro em Mullingar, Irlanda. Sou apaixonado por tecnologia, esportes e música. Minha jornada na área de desenvolvimento de software começou no ensino médio, quando, além da educação regular, cursei um curso técnico em desenvolvimento de software. Após o ensino médio, ingressei na universidade, onde estudei Análise e Desenvolvimento de Sistemas. Durante a universidade, consegui meu primeiro emprego como desenvolvedor de software na NG Informática. Após cinco anos de experiência valiosa, decidi mudar para Dublin, Irlanda, para aprimorar meus estudos e aprofundar meu conhecimento em inglês. Em 1 ano e 6 meses, fui contratado pela Writech Group e me mudei para Mullingar. Desde então, tenho me dedicado ao aprendizado contínuo em desenvolvimento web, explorando tecnologias como React, React Native, Vue JS e Node JS.",
     "aboutFullName": "Nome completo",
     "aboutNationality": "Nacionalidade",
     "aboutNationalityDesc": "Brasileira",
@@ -27,6 +27,8 @@
     "projectsCodecDsc": "Aplicação que recebe um comando e simula a movimentação de um robô em Marte exibindo sua posição final",
     "projectsGitFinderTitle": "github-user-finder",
     "projectsGitFinderDsc": "Aplicação que recebe o nome de um usuário do Github e retorna suas informações",
+    "projectsWeathermomTitle": "weathermom",
+    "projectsWeathermomDsc": "Aplicação que fornece informações meteorológicas agindo como uma mãe cuidadosa",
     "linksTitle": "Vamos nos conectar!",
     "linksSubTitle": "Siga-me nas minhas redes sociais",
     "contactTitle": "Entre em contato",
@@ -54,5 +56,5 @@
     "buttonGo": "Ir",
     "buttonApp": "App",
     "buttonCode": "Código",
-    "footerTitle": "2023 Luis Fellipy Bett. Todos os Direitos Reservados."
+    "footerTitle": "© 2023-2024, Luis Fellipy Bett. Todos os Direitos Reservados."
 }
