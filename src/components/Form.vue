@@ -92,7 +92,7 @@
 
                     const serviceID = 'service_9ixpaq7'
                     const templateID = 'template_fuvdy3d'
-                    const publicKey = 'rec1b8cUb3hipPP7u'
+                    const publicKey = '7aeVQ-rbrA9Yot1-b'
 
                     var templateParams = {
                         name: this.name,
