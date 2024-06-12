@@ -9,6 +9,8 @@
 
         <div v-if="model==='project'" class="technology-container">
             <h3>{{ $t('projectsTechnology') }}:</h3>
+            <IconBrandNodejs v-if="tech === 'Node' || tech2 === 'Node'" class="technology-icon" color="#26AF70" :size="25" stroke-width="2"/>
+            <span v-if="tech && tech2">+</span>
             <IconBrandJavascript v-if="tech === 'JS'" class="technology-icon" color="#26AF70" :size="30" stroke-width="2"/>
             <IconBrandVue v-if="tech === 'Vue'" class="technology-icon" color="#26AF70" :size="25" stroke-width="2"/>
             <IconBrandReact v-if="tech === 'React'" class="technology-icon" color="#26AF70" :size="25" stroke-width="2"/>
@@ -30,7 +32,7 @@
 <script>
 
     import Button from './Button.vue'
-    import { IconBrandJavascript, IconBrandVue, IconBrandReact } from '@tabler/icons-vue'
+    import { IconBrandJavascript, IconBrandVue, IconBrandReact, IconBrandNodejs } from '@tabler/icons-vue'
 
     export default {
         name: 'Card',
@@ -38,7 +40,8 @@
             Button,
             IconBrandJavascript,
             IconBrandVue,
-            IconBrandReact
+            IconBrandReact,
+            IconBrandNodejs
         },
         props: {
             model: {
@@ -50,6 +53,10 @@
                 default: 'Card'
             },
             tech: {
+                type: String,
+                default: ''
+            },
+            tech2: {
                 type: String,
                 default: ''
             },

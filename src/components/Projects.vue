@@ -10,6 +10,9 @@
             <Card title="projectsCodecTitle" tech="JS" description="projectsCodecDsc" buttonCode="https://github.com/luisbett/codec-test" />
             <Card title="projectsGitFinderTitle" tech="React" description="projectsGitFinderDsc" buttonApp="https://luisbett-github-user-finder.netlify.app/" buttonCode="https://github.com/luisbett/github-user-finder" />
             <Card title="projectsWeathermomTitle" tech="React" description="projectsWeathermomDsc" buttonApp="https://luisbett-weathermom.netlify.app/" buttonCode="https://github.com/luisbett/weathermom" />
+            <Card title="projectsEuroTodayTitle" tech="Node" description="projectsEuroTodayDsc" buttonCode="https://github.com/luisbett/euro-today" />
+            <Card title="projectsLoginJWTTitle" tech="React" tech2="Node" description="projectsLoginJWTDsc" buttonApp="https://luisbett-login-jwt.netlify.app/" buttonCode="https://github.com/luisbett/login-jwt" />
+            <Card title="projectsMyWeddingTitle" tech="React" description="projectsMyWeddingDsc" buttonApp="https://wedding-luis-e-le.web.app/" buttonCode="https://github.com/luisbett/my-wedding" />
 
         </div>
 
